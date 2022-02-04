@@ -3,6 +3,7 @@
 //export const baseUrl='http://localhost:8080/'
 
 
+
 export const baseUrl=`${window.location.protocol}//${window.location.hostname}:${window.location.port}`
 
 export const fileUrl=`${window.location.protocol}//${window.location.hostname}:${window.location.port}/`
