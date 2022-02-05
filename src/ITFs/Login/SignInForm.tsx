@@ -235,7 +235,7 @@ export function SignInForm(props:any) {
          var result='',errorMessage='',errors =new Array();
          props.ActionToDispatch({ type: 'AUTH_PENDING' ,payload : ['Signing In'] });
          setloaderDisplay(true)
-         setState({formErrorMessage: 'In process'});
+         setState({formErrorMessage: ''});
 
        
          handleSignInJWT(values,async(err:any,result:any)=>{
@@ -286,6 +286,7 @@ export function SignInForm(props:any) {
             {
               props.ActionToDispatch({ type: 'AUTH_ERROR' ,payload : err.errors });
               setState({formErrorMessage: err.errorMessage,formErrors : err.errors}); 
+              setloaderDisplay(false)
             }
          })
         }

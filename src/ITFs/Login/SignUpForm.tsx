@@ -51,7 +51,7 @@ export function SignUpForm(props:any) {
    const handleProcessSubmit = async(values:any) => {
    var result='',errorMessage='',errors =new Array();
    props.ActionToDispatch({ type: 'AUTH_PENDING' ,payload : ['Signing In'] });
-   setState({formErrorMessage: 'In process'});
+   setState({formErrorMessage: ''});
    setloaderDisplay(true)
    handleSignUpJWT(values,async (err:any,result:any)=>
  {
