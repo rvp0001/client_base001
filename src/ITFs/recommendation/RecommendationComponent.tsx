@@ -126,11 +126,11 @@ export const RecommendationComponent = (props: any) => {
     }
   }, [])
   const getStockcmp = () => {
-    setloaderDisplay(!loaderDisplay); compinp.current.focus()
+    setloaderDisplay(true); compinp.current.focus()
     fetchStocks({},
 
       (err: any, result: any): any => {
-        if (err == '') { console.log(result); props.addstocks(result); setloaderDisplay(!loaderDisplay) }
+        if (err == '') { console.log(result); props.addstocks(result); setloaderDisplay(false) }
         else { console.log(err, result) }
       })
   }

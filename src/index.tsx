@@ -1,6 +1,6 @@
 import ReactDom from 'react-dom'
 import { App } from './App'
-
+import './ITFs/common/common.css'
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('sw.js')
