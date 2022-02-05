@@ -77,7 +77,7 @@ export function SideBar1(props: any) {
   useAltKey("r",() =>{redirectto('/Recommendations')})
   useAltKey("u",() =>{redirectto('/Users')})
   const [activeMenu, setActiveMenu] = useState(menuList[0].name)
-
+  const [displayMenu,setDisplayMenu] = useState(false)
   function selectItem(menuItem: string) {
     setActiveMenu(menuItem)
     selectcomponent(menuItem)
@@ -118,7 +118,8 @@ export function SideBar1(props: any) {
   
 
     
-  return (
+  return (<>
+  <input type="checkbox" id="nav-toggle" checked={displayMenu} onClick={()=>setDisplayMenu(!displayMenu)}/>
     <div className="sidebar">
       <div className="sidebar-brand">
         <h2>
@@ -136,12 +137,14 @@ export function SideBar1(props: any) {
               active={activeMenu === menuitem.name ? 'active' : ''}
               selectItem={M_selectItem}
               slug={menuitem.slug}
+              toggleMenu={setDisplayMenu}
             />
           )
         })}
         {/* </ui> */}
       </div>
     </div>
+    </>
   )
 }
 

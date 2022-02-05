@@ -20,67 +20,7 @@ import {BrowserRouter as Rounter, Route, Switch} from 'react-router-dom'
 import { SearchSelectInput } from '../common/InputFields/Select/SearchSelectInput'
 //import {getUsers,addusers} from '../Redux/ActionCreators'
 
-function displaySelectedComponent(displayItem: string) {
-  let selectedComp = null
-  switch (displayItem) {
-    case 'Dashboard':
-      selectedComp = (
-        <>
-          <IndicatorCards />
-          <div className="recent-grid">
-            <Projects />
-            <Customers />
-          </div>
-        </>
-      )
-      break
 
-    case 'Projects':
-      selectedComp = (
-        <>
-          <Projects />
-          <AddFabButton />
-        </>
-      )
-      break
-    case 'Customers':
-      selectedComp = (
-        <>
-          {/* <TextField label="abc"></TextField>
-            <Checkbox></Checkbox>
-            <Switch></Switch> */}
-          {/* <AppbarBottom/>   */}
-          
-          <Button wd="4" label="Resgister" className={'btn1'} />
-        </>
-      )
-      break
-    case 'Orders':
-      selectedComp = (
-        <>
-          <Customer />
-        </>
-      )
-      break
-    case 'Inventory':
-      selectedComp = (
-        <>
-          <Inventery />
-        </>
-      )
-      break
-      case 'Users':
-      selectedComp = (
-        <>
-          <UserListComponent/>
-        </>
-      )
-      break
-    default:
-      break
-  }
-  return selectedComp
-}
 
 const DashboardComponent = (props: any) => {
   return (
@@ -96,17 +36,10 @@ const DashboardComponent = (props: any) => {
 }
 
 function Dashboard(props: any) {
-  // getUsers({applicationid:'15001500',client:'45004500',lang: 'EN'}).then((users:any)=>{
-  //   if(props){
-  //   props.addusers(users)
-  // }
-  // });
   console.log('in dashboard')
   const [displayComponent, setDisplayComponent] = useState('Dashboard')
   return (
     <Rounter>
-  
-      <input type="checkbox" id="nav-toggle" />
       <SideBar selectcomponent={setDisplayComponent} />
       <div className="main-content">
         <Header title={displayComponent} />
@@ -127,7 +60,7 @@ function Dashboard(props: any) {
             <Route exact path="/recommendationedit">
               <RecommendationComponent {...props}/>
             </Route>
-          {/* {displaySelectedComponent(displayComponent)} */}
+          
           </Switch>
         </main>
       </div>
