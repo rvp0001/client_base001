@@ -112,10 +112,10 @@ export const RecommendationComponent = (props: any) => {
     let z_id = new URLSearchParams(props.location.search).get("z_id")
     compinp.current.focus()
     if (z_id != 'NO-ID') {
-      setloaderDisplay(!loaderDisplay)
+      setloaderDisplay(true)
       getRecommendations({ applicationid: '15001500', client: '45004500', lang: 'EN', z_id }).then((data: any) => {
         modifydocument(data[0])
-        setloaderDisplay(loaderDisplay)
+        setloaderDisplay(false)
       });
     }
     if (z_id == 'NO-ID') {

@@ -1,16 +1,11 @@
-import React, { useState } from 'react'
-import AppbarBottom from '../common/AppBarBottom/AppbarBottom'
-import AddFabButton from '../common/Fab/AddFabButton'
+import { useState } from 'react'
+
 import Customers from '../Customers/Customers'
-import Customer from '../Customers/customer'
 import Projects from '../Projects/Projects'
 import Header from './Header/Header'
 import IndicatorCards from './Indicators/IndicatorCards'
 import {SideBar} from './Menu/SideBar'
-import { Input } from '../common/InputFields/Input/Input'
-import { Select } from '../common/InputFields/Select/Select'
-import Inventery from '../Inventory/Inventery'
-import { Button } from '../common/Button/Button'
+
 import {connect} from 'react-redux'
 import UserComponent from '../User/UserComponent'
 import UserListComponent from '../User/UserListComponent'
@@ -18,11 +13,10 @@ import RecommendationList from '../recommendation/RecommendationList'
 import RecommendationComponent from '../recommendation/RecommendationComponent'
 import {BrowserRouter as Rounter, Route, Switch} from 'react-router-dom'
 import { SearchSelectInput } from '../common/InputFields/Select/SearchSelectInput'
-//import {getUsers,addusers} from '../Redux/ActionCreators'
-
-
 
 const DashboardComponent = (props: any) => {
+const [loaderDisplay,setloaderDisplay] =useState(true)
+  
   return (
     <>
       <IndicatorCards />
@@ -36,6 +30,7 @@ const DashboardComponent = (props: any) => {
 }
 
 function Dashboard(props: any) {
+  
   console.log('in dashboard')
   const [displayComponent, setDisplayComponent] = useState('Dashboard')
   return (

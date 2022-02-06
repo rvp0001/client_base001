@@ -7,7 +7,7 @@ import FormContextProvider from './FormContext'
 import FormComponent from './components/Elements/FormComponent'
 import Dashboard from './ITFs/Dashboard/Dashboard'
 import Login from './ITFs/Login/Login'
-
+import {AuthorisationswitchComponent} from './ITFs/Login/AuthorisationswitchComponent'
 const {persistor,store} = ConfigureStore();
 
 /*
@@ -27,9 +27,9 @@ export const App = () => {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
- 
+ <AuthorisationswitchComponent/>
 
- <Login/>
+ {/* <Login/> */}
     </PersistGate>
     </Provider>
 //    <Login/>

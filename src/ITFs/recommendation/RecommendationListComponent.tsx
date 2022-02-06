@@ -104,20 +104,20 @@ useAltKey("n",() =>{setDocStatus("NO-ID",true)})
     )
 }
 
-const mapStateToProps = (state: any) => {
-  const recdoc = state?.documents?.documents?.filter((document:any) => document.doctype==doctypes.RECOMMENDATION )
-  return({
-  users: state.documents.users,
-  docnos: state.documents.docnos,
-  companies: state.documents.companies,
-  recommendations:recdoc
-})}
+// const mapStateToProps = (state: any) => {
+//   const recdoc = state?.documents?.documents?.filter((document:any) => document.doctype==doctypes.RECOMMENDATION )
+//   return({
+//   users: state.documents.users,
+//   docnos: state.documents.docnos,
+//   companies: state.documents.companies,
+//   recommendations:recdoc
+// })}
 
-const mapdispatcherToProp=(dispatch:any)=>{
-  return {
-    addusers :(users:any)=> dispatch(addusers(users))
-  }
-}
+// const mapdispatcherToProp=(dispatch:any)=>{
+//   return {
+//     addusers :(users:any)=> dispatch(addusers(users))
+//   }
+// }
 export default withRouter(
-  connect(mapStateToProps,mapdispatcherToProp)(RecommendationListComponent)
+  connect(null,null)(RecommendationListComponent)
 )
