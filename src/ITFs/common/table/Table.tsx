@@ -1,22 +1,25 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect,useRef } from 'react'
 import Column from './Column'
 import ColumnHead from './ColumnHead'
 import {Pagination} from './Pagination';
 import SMIconButton from './SMIconButton';
 function Table(props: any) {
-    let { data,actions,actionColWidth,headerText,addNew,searchref,onRowClick} = props
+    let { data,actions,actionColWidth,headerText,addNew,onRowClick} = props
     const [selectedColumn, setSelectedColumn] = useState("");
     const [order, setOrder] = useState("");
     const [activePage, setActivePage] = useState(1);
     const [filterdata, setFilter] = useState([]);
     const [numberOfRecordsPerPage, setNumberOfRecordsPerPage] = useState(50)
+    const searchref:any = useRef(0)
     function sortSelectedColumn(selectedcolumn: string, order: string) {
         setOrder(order);
         setSelectedColumn(selectedcolumn)
     }
     useEffect(() => {
-        setFilter([...data])
-        
+        setFilter(data)
+        if(searchref.current.focus){
+            searchref.current.focus()
+          }
     }, [data])
     
 
@@ -58,17 +61,10 @@ function Table(props: any) {
                         if((data[i][key])?.toLowerCase()?.includes(searchtext?.toLowerCase())){
                             filteredData.push(data[i])
                             break;
-                        }
-        
+                        }       
                     }
 
                 }
-
-            
-
-
-
-
             }
         }
         setFilter(filteredData);
@@ -125,4 +121,4 @@ function Table(props: any) {
     )
 }
 
-export default Table
+export default React.memo(Table)

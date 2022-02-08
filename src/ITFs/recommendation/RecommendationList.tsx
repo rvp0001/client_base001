@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useState,useRef,useCallback } from 'react'
+import React, { useMemo,useCallback } from 'react'
 import Table from '../common/table/Table'
 import Column from '../common/table/Column'
 import { Redirect, withRouter } from 'react-router-dom'
@@ -14,22 +14,19 @@ function RecommendationList() {
    const fetchquery = useMemo(()=>(fetchGQL),[1])
    const deletequery = useMemo(()=>(deleteGQL),[1])
    const [tableData,loaderDisplay,docno, setDocno,redirect, setRedirect,documentstatus,deleteDocument,closeSnackBar]:any=useTableAction(fetchquery,"recommendation",deletequery)
-   useAltKey("n",() =>{setDocStatus("NO-ID",true)})
-   const inpref:any = useRef(0)
+   
    let tabledata:any=[]
    if(tableData) {
-    tabledata= [...tableData]
+    tabledata= useMemo(()=>tableData,[loaderDisplay])
    }
    const setDocStatus = (id: string, redirect: boolean) => {
     setDocno(id)
     setRedirect(redirect)
   }
 
-  const M_setDocStatus = useCallback((id,redirect) => {setDocStatus(id,redirect)},[1],)
+  const M_setDocStatus = useCallback((id,redirect) => {setDocStatus(id,redirect)},[1])
   const {action,yesaction,noaction,dailogtext,dailogtitle} = documentstatus;
-  if(inpref.current.focus){
-  inpref.current.focus()
-}
+  useAltKey("n",() =>{setDocStatus("NO-ID",true)})
   if (redirect) {
     let redirectpath = '/recommendationedit?z_id=' + docno
     return <Redirect push to={redirectpath} /> 
@@ -45,7 +42,7 @@ function RecommendationList() {
                 headerText="User List"
                  addNew={M_setDocStatus}
                  onRowClick={M_setDocStatus}
-                 searchref={inpref}
+                 
                 actions={[
                   // {
                   //   action: (id: any) => {

@@ -7,4 +7,4 @@ function Column(props:any) {
     )
 }
 
-export default Column
+export default React.memo(Column)
