@@ -1,10 +1,10 @@
-.nav-container{
+.nav-container {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 .nav {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 600px;
   height: 55px;
@@ -26,7 +26,7 @@
   white-space: nowrap;
   font-family: sans-serif;
   font-size: 13px;
-  color: #EAEAEA;
+  color: #eaeaea;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   transition: background-color 0.1s ease-in-out;
@@ -38,7 +38,7 @@
 }
 
 .nav__link--active {
-  color: #FFB344;
+  color: #ffb344;
 }
 
 .nav__icon {
@@ -74,14 +74,14 @@
 }
  */
 
- @media only screen and (max-width: 560px) {
+@media only screen and (max-width: 560px) {
   .nav {
     width: 420px;
     position: fixed;
     bottom: 0;
   }
- }
+}
 
- .nav-container i{
-   font-size: 18px;
- }
+.nav-container i {
+  font-size: 18px;
+}
