@@ -81,7 +81,13 @@
     bottom: 0;
   }
 }
-
+@media only screen and (max-width: 450px) {
+  .nav {
+    width: 350px;
+    position: fixed;
+    bottom: 0;
+  }
+}
 .nav-container i {
   font-size: 18px;
 }
