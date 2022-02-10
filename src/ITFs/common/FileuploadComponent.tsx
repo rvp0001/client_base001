@@ -12,7 +12,7 @@ import {
   uploadDocformIDBArr,
   saveItemGeneric,
   saveDatauriToIndexdb
-} from "../ITFs/common/CommonLogic";
+} from "./CommonLogic";
 import { Avatar, Button } from "@material-ui/core";
 import { Alert, AlertTitle } from "@material-ui/lab";
 
@@ -27,8 +27,8 @@ import {
   getTimeFormat,
   getDateYYYYMMDDHHMI,
   getFromToDate,
-} from "../ITFs/common/validationlib";
-import { fileUrl, deleteUrl, uploadUrl, getfileUrl } from "../shared/baseUrl";
+} from "./validationlib";
+import { fileUrl, deleteUrl, uploadUrl, getfileUrl } from "../../shared/baseUrl";
 
 
 

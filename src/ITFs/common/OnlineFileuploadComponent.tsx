@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { fileUrl, deleteUrl, uploadUrl, getfileUrl,baseUrl } from "../shared/baseUrl";
+import { fileUrl, deleteUrl, uploadUrl, getfileUrl,baseUrl } from "../../shared/baseUrl";
 import { Avatar, Button } from "@material-ui/core";
 
 import {
     setValue, getValue, getErrorValue, getErrorValueN, setCalValue,
    
-  } from '../ITFs/common/validationlib';
+  } from './validationlib';
 
 
 

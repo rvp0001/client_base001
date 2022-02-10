@@ -21,8 +21,8 @@ import { connect } from 'react-redux';
 import * as ActionTypes from '../Redux/ActionTypes'
 import Loader from '../common/Loader/Loader'
 import deleteGQL from '../mutations/DeleteRecommendation'
-import { FileuploadComponent } from '../../components/FileuploadComponent'
-import { OnlineFileuploadComponent } from '../../components/OnlineFileuploadComponent'
+import { FileuploadComponent } from '../common/FileuploadComponent'
+import { OnlineFileuploadComponent } from '../common/OnlineFileuploadComponent'
 import shortid from 'shortid'
 
 const newDocument = (doctype: String, doctypetext: String) => {
