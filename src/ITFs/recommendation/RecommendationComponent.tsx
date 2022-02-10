@@ -34,7 +34,6 @@ const newDocument = (doctype: String, doctypetext: String) => {
     uploadfiles: [],
     onlineuploadfiles: [],
     t_id: shortid.generate()
-
   }
 };
 
@@ -44,6 +43,10 @@ const newDocument = (doctype: String, doctypetext: String) => {
 
 export const handleSaveCheck = (currentdocument: any) => {
   const { touched, name, recodate, cmp, addupto, sl, target1, target2, weightage, timeframe, validatemode } = currentdocument;
+
+  
+console.log('nvl(target1, )',runCheck(nvl(target1, ''), [requiredCheck]))
+
   let name_check = runCheck(nvl(name, ''), [requiredCheck]);
   let recodate_check = runCheck(nvl(recodate, ''), [requiredCheck]);
   let cmp_check = runCheck(nvl(cmp, ''), [requiredCheck]);
@@ -53,6 +56,7 @@ export const handleSaveCheck = (currentdocument: any) => {
   let target2_check = runCheck(nvl(target2, ''), [requiredCheck])
   let weightage_check = runCheck(nvl(weightage, ''), [requiredCheck]);
   let timeframe_check = runCheck(nvl(timeframe, ''), [requiredCheck]);
+  console.log('currentdocument.errorsAll',currentdocument.errorsAll)
   if (validatemode == 'save') {
     currentdocument.errorsAll = {
       name: name_check,
@@ -65,18 +69,19 @@ export const handleSaveCheck = (currentdocument: any) => {
       weightage: weightage_check,
       timeframe: timeframe_check,
     }
+    validatemode == 'touch' 
   }
   if (validatemode == 'touch' && touched != null) {
     currentdocument.errorsAll = {
       name: checkTouched(nvl(touched.name, false), name_check),
-      recodate: checkTouched(nvl(touched.username, false), recodate_check),
-      cmp: checkTouched(nvl(touched.password, false), cmp_check),
-      addupto: checkTouched(nvl(touched.repeatpassword, false), addupto_check),
-      sl: checkTouched(nvl(touched.name, false), sl_check),
-      target1: checkTouched(nvl(touched.username, false), target1_check),
-      target2: checkTouched(nvl(touched.password, false), target2_check),
-      weightage: checkTouched(nvl(touched.repeatpassword, false), weightage_check),
-      timeframe: checkTouched(nvl(touched.repeatpassword, false), timeframe_check),
+      recodate: checkTouched(nvl(touched.recodate, false), recodate_check),
+      cmp: checkTouched(nvl(touched.cmp, false), cmp_check),
+      addupto: checkTouched(nvl(touched.addupto, false), addupto_check),
+      sl: checkTouched(nvl(touched.sl, false), sl_check),
+      target1: checkTouched(nvl(touched.target1, false), target1_check),
+      target2: checkTouched(nvl(touched.target2, false), target2_check),
+      weightage: checkTouched(nvl(touched.weightage, false), weightage_check),
+      timeframe: checkTouched(nvl(touched.timeframe, false), timeframe_check),
     }
   }
 
@@ -139,6 +144,10 @@ export const RecommendationComponent = (props: any) => {
   if (stocklist && props ?.stocks && stocklist ?.length !== props ?.stocks ?.length) {
     setstocklist(props.stocks.map((el: any) => { return { value: el.name, label: el.name } }));
   }
+
+
+
+
   const M_stocklist = useMemo(() => stocklist, [stocklist])
   if (redirect) {
     let redirectpath = '/Recommendations'
@@ -148,8 +157,8 @@ export const RecommendationComponent = (props: any) => {
   {
 
 
-
-
+  
+    let currentdocument1=handleSaveCheck(currentdocument);
 
     return (
       <>
@@ -158,43 +167,43 @@ export const RecommendationComponent = (props: any) => {
           <div className="grid">
      
             <div className="row">
-              <SearchSelectInput inpref={compinp} wd="3" label="" options={M_stocklist} name="name" currdoc={currentdocument} section={'name'} modifydoc={modifydocument} refresh={getStockcmp} />
-              <DatePicker wd="3" label="Recommendation Date" name="recodate" currdoc={currentdocument} section={'recodate'} modifydoc={modifydocument} format="yyyymmdd" />
-              <FlatInput wd="3" label="Current market price" name="cmp" currdoc={currentdocument} section={'cmp'} modifydoc={modifydocument} />
+              <SearchSelectInput inpref={compinp} wd="3" label="" options={M_stocklist} name="name" currdoc={currentdocument1} section={'name'} modifydoc={modifydocument} refresh={getStockcmp} />
+              <DatePicker wd="3" label="Recommendation Date" name="recodate" currdoc={currentdocument1} section={'recodate'} modifydoc={modifydocument} format="yyyymmdd" />
+              <FlatInput wd="3" label="Current market price" name="cmp" currdoc={currentdocument1} section={'cmp'} modifydoc={modifydocument} />
               <div className={"col-3"}></div>
             </div>
             <div className="row">
-              <FlatInput wd="3" label="Add Up To" name="addupto" currdoc={currentdocument} section={'addupto'} modifydoc={modifydocument} />
-              <FlatInput wd="3" label="Stop Loss" name="sl" currdoc={currentdocument} section={'sl'} modifydoc={modifydocument} />
+              <FlatInput wd="3" label="Add Up To" name="addupto" currdoc={currentdocument1} section={'addupto'} modifydoc={modifydocument} />
+              <FlatInput wd="3" label="Stop Loss" name="sl" currdoc={currentdocument1} section={'sl'} modifydoc={modifydocument} />
               <div className={"col-6"}></div>
             </div>
             <div className="row">
-              <FlatInput wd="3" label="Weightage" name="weightage" currdoc={currentdocument} section={'weightage'} modifydoc={modifydocument} />
-              <SelectInput wd="3" label="Time Frame" options={timeframeoptions} name="timeframe" currdoc={currentdocument} section={'timeframe'} modifydoc={modifydocument} />
+              <FlatInput wd="3" label="Weightage" name="weightage" currdoc={currentdocument1} section={'weightage'} modifydoc={modifydocument} />
+              <SelectInput wd="3" label="Time Frame" options={timeframeoptions} name="timeframe" currdoc={currentdocument1} section={'timeframe'} modifydoc={modifydocument} />
               <div className={"col-3"}></div>
               <div className={"col-3"}></div>
             </div>
             <div className="row">
-              <FlatInput wd="3" label="Target 1" name="target1" currdoc={currentdocument} section={'target1'} modifydoc={modifydocument} />
-              <FlatInput wd="3" label="Target 2" name="target2" currdoc={currentdocument} section={'target2'} modifydoc={modifydocument} />
-              <FlatInput wd="3" label="Target 3" name="target3" currdoc={currentdocument} section={'target3'} modifydoc={modifydocument} />
+              <FlatInput wd="3" label="Target 1" name="target1" currdoc={currentdocument1} section={'target1'} modifydoc={modifydocument} />
+              <FlatInput wd="3" label="Target 2" name="target2" currdoc={currentdocument1} section={'target2'} modifydoc={modifydocument} />
+              <FlatInput wd="3" label="Target 3" name="target3" currdoc={currentdocument1} section={'target3'} modifydoc={modifydocument} />
               <div className={"col-3"}></div>
             </div>
             <div className="row">
-              <FlatInput wd="3" label="Target 4" name="target4" currdoc={currentdocument} section={'target4'} modifydoc={modifydocument} />
-              <FlatInput wd="3" label="Target 5" name="target5" currdoc={currentdocument} section={'target5'} modifydoc={modifydocument} />
-              <FlatInput wd="3" label="Target 6" name="target6" currdoc={currentdocument} section={'target6'} modifydoc={modifydocument} />
+              <FlatInput wd="3" label="Target 4" name="target4" currdoc={currentdocument1} section={'target4'} modifydoc={modifydocument} />
+              <FlatInput wd="3" label="Target 5" name="target5" currdoc={currentdocument1} section={'target5'} modifydoc={modifydocument} />
+              <FlatInput wd="3" label="Target 6" name="target6" currdoc={currentdocument1} section={'target6'} modifydoc={modifydocument} />
               <div className={"col-3"}></div>
             </div>
             <div className="row">
-              <FlatInput wd="3" label="Target 7" name="target7" currdoc={currentdocument} section={'target7'} modifydoc={modifydocument} />
-              <FlatInput wd="3" label="Target 8" name="target8" currdoc={currentdocument} section={'target8'} modifydoc={modifydocument} />
-              <FlatInput wd="3" label="Target 9" name="target9" currdoc={currentdocument} section={'target9'} modifydoc={modifydocument} />
+              <FlatInput wd="3" label="Target 7" name="target7" currdoc={currentdocument1} section={'target7'} modifydoc={modifydocument} />
+              <FlatInput wd="3" label="Target 8" name="target8" currdoc={currentdocument1} section={'target8'} modifydoc={modifydocument} />
+              <FlatInput wd="3" label="Target 9" name="target9" currdoc={currentdocument1} section={'target9'} modifydoc={modifydocument} />
               <div className={"col-3"}></div>
             </div>
  
             <div className="row">
-            <button onClick={()=>{handlesendRecommendationNotification(currentdocument)}}>
+            <button onClick={()=>{handlesendRecommendationNotification(currentdocument1)}}>
                   Send Notication 
             </button>
             </div>
@@ -205,7 +214,7 @@ export const RecommendationComponent = (props: any) => {
                 autoupload={true}
                
                 saveasis={() => {  }}
-                currdoc={currentdocument}
+                currdoc={currentdocument1}
                 modifydoc={modifydocument}
               />
 

@@ -38,6 +38,7 @@ export function SearchSelect(props: any) {
     ref={inpref}
           value={{  value: yz,  label: yz}} 
           onChange={(value:any)=>{value?.value.length>2 ? setCalValue(currdoc,section,value?.value,modifydoc,cal):""  } } 
+          onBlur={event => modifydoc(setValue(currdoc, 'touched.' + section, true))}
           //onBlur={event => modifydoc(setValue(currdoc,'touched.'+section,true))}
           options={options}
           isClearable={true}
