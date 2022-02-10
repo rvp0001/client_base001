@@ -2,6 +2,7 @@
 import {useState,useEffect} from 'react'
 import { execGql, execGql_xx } from '../gqlclientconfig';
 import constant,{initDocumentstatus,newDocument} from '../common/constant';
+import { useCallback } from 'react';
 
 function useTableAction(fetchGraphQuery:any, doctype:String,deleteGraphQuery:any) {
     const [tableData, setTableData] = useState([])
@@ -22,7 +23,7 @@ function useTableAction(fetchGraphQuery:any, doctype:String,deleteGraphQuery:any
      }
    }, [])
 
-   const getTableData = () => {
+   const getTableData = useCallback(() => {
         var result: any = '';
         return new Promise(async(reolve,reject)=>{
           try {       
@@ -46,9 +47,9 @@ function useTableAction(fetchGraphQuery:any, doctype:String,deleteGraphQuery:any
             
           }
         })
-      }
+      },[1])
 
-     const deleteDocument = (id:String) =>{
+     const deleteDocument = useCallback((id:String) =>{
       const docstatus = {...documentstatus}
       docstatus.action= true;
       docstatus.dailogtitle= doctype + ' Deletion';
@@ -72,9 +73,9 @@ function useTableAction(fetchGraphQuery:any, doctype:String,deleteGraphQuery:any
         setDocumentstatus({...docstatus})
       }
       setDocumentstatus({...docstatus});
-    }
+    },[1])
 
-     const handleDelete = async (z_id: String) => {
+     const handleDelete =useCallback( async (z_id: String) => {
        return new Promise(async (resolve, reject) => {
         var result: any = '', errorMessage = '', errors = new Array();
         try {
@@ -96,12 +97,12 @@ function useTableAction(fetchGraphQuery:any, doctype:String,deleteGraphQuery:any
         }
        })
       
-    }
-    const closeSnackBar=()=>{
+    },[1])
+    const closeSnackBar=useCallback(()=>{
       let docstatus={...documentstatus}
         docstatus.snackbaropen=false;
       setDocumentstatus(docstatus)
-    }
+    },[1])
       return [tableData,loaderDisplay,docno, setDocno,redirect, setRedirect,documentstatus,deleteDocument,closeSnackBar]
 }
 
