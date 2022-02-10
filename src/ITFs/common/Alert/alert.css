@@ -1,7 +1,7 @@
 .alert{
     padding: 20px 40px;
     min-width: 420px;
-    position: absolute;
+    position: fixed;
     right: 0px;
     bottom: 55px;
     overflow: hidden;
@@ -138,4 +138,35 @@
 
 .success .close-btn .fa-times{
     color:#228B22;
+}
+
+@media only screen and (max-width: 560px) {
+    .alert{
+        padding: 20px 40px;
+        min-width: 320px;
+        position: fixed;
+        right: 0px;
+        bottom: 55px;
+        overflow: hidden;
+        border-radius: 4px;
+        z-index: 300;
+    }
+
+    .alert .msg{
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    .close-btn .fa-times{
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .alert .fa-exclamation-circle,.alert .fa-check-circle{
+        position: absolute;
+        left: 20px;
+        top:50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+    }
 }
