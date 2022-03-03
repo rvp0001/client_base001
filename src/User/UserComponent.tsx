@@ -1,25 +1,25 @@
 import React, { useState,useEffect,useRef } from 'react'
 import { AnyIfEmpty, connect } from 'react-redux'
-import { Button } from '../../common/Button'
-import DatePicker from '../../common/DatePicker'
-import { FlatInput } from '../../common/InputFields/Input'
-import { SelectInput } from '../../common/InputFields/Select'
-import * as doctypes from '../../common/Doctypes';
-import saveUser from '../../common/mutations/saveUsername'
-import { getDocs, getDocconfig, getLblVal, checkTouched, nvl, checkItem, isCheckedbool, getDocumenForSave } from '../../common/CommonLogic';
+import { Button } from '../common/Button'
+import DatePicker from '../common/DatePicker'
+import { FlatInput } from '../common/InputFields/Input'
+import { SelectInput } from '../common/InputFields/Select'
+import * as doctypes from '../common/Doctypes';
+import saveUser from '../common/mutations/saveUsername'
+import { getDocs, getDocconfig, getLblVal, checkTouched, nvl, checkItem, isCheckedbool, getDocumenForSave } from '../common/CommonLogic';
 import shortid from 'shortid'
-import { deleteDocument,saveDocument,addusers } from '../Redux/ActionCreators'
-import deleteUser from '../../common/mutations/deleteUsername';
-import { execGql, execGql_xx } from '../gqlclientconfig';
-import usersQuery from '../../common/queries/usersQuery'
-import Messagesnackbar from '../../common/Alert'
-import AlertDialog from '../../common/PopupModals/ConfirmationModal'
-import useSaveAction from '../../common/Hooks/useSaveAction'
-import Loader from '../../common/Loader/Loader'
-import {initDocumentstatus,newDocument} from '../../common/constant'
-import {runCheck,requiredCheck,getDtFormat,getTimeFormat,getFromToDate,getDateYYYYMMDDHHMI,getDateYYYYMMDD,maxLength40,maxLength128,setErrorValue,getValue,setValue} from '../../common/validationlib';
+import { deleteDocument,saveDocument,addusers } from '../ITFs/Redux/ActionCreators'
+import deleteUser from '../common/mutations/deleteUsername';
+import { execGql, execGql_xx } from '../common/gqlclientconfig';
+import usersQuery from '../common/queries/usersQuery'
+import Messagesnackbar from '../common/Alert'
+import AlertDialog from '../common/PopupModals/ConfirmationModal'
+import useSaveAction from '../common/Hooks/useSaveAction'
+import Loader from '../common/Loader/Loader'
+import {initDocumentstatus,newDocument} from '../common/constant'
+import {runCheck,requiredCheck,getDtFormat,getTimeFormat,getFromToDate,getDateYYYYMMDDHHMI,getDateYYYYMMDD,maxLength40,maxLength128,setErrorValue,getValue,setValue} from '../common/validationlib';
  import {Redirect,withRouter } from 'react-router-dom'
-import AppbarBottom from '../../common/AppbarBottom'
+import AppbarBottom from '../common/AppbarBottom'
 const usexoptions = [{ 'key': 'M', 'value': 'Male' }, { 'key': 'F', 'value': 'Female' }, { 'key': 'NTD', 'value': 'Not disclosed' }]
 const countryoptions = [{ 'key': 'IN', 'value': 'India' }, { 'key': 'GE', 'value': 'Germany' }, { 'key': 'US', 'value': 'USA' }]
 const handleSave = async (currentdocument: any) => {

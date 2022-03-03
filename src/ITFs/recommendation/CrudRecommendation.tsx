@@ -5,7 +5,7 @@ import recommendationItems from '../../common/queries/recommendationItemsQuery'
 import deleteRecommendation from '../../common/mutations/DeleteRecommendation';
 import saveReccomendation from '../../common/mutations/saveReccomendation';
 import sendRecommendationNotification from '../../common/mutations/sendRecommendationNotification';
-import { execGql, execGql_xx } from '../gqlclientconfig';
+import { execGql, execGql_xx } from '../../common/gqlclientconfig';
 
 export const handleSave = async (currentdocument: any) => {
     var result: any = '', errorMessage = '', errors = new Array();

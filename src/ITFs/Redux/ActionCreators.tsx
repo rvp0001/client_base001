@@ -1,6 +1,6 @@
 import * as ActionTypes from './ActionTypes';
 import { baseUrl, masterDataUrl, gqlUrl } from '../../shared/baseUrl';
-import { execGqlURL } from '../gqlclientconfig'
+import { execGqlURL } from '../../common/gqlclientconfig'
 import stocks from '../../common/queries/stocks';
 
 export const addstocks = (stocks: any) => {

@@ -1,6 +1,6 @@
 
 import {useState,useEffect} from 'react'
-import { execGql, execGql_xx } from '../../ITFs/gqlclientconfig';
+import { execGql, execGql_xx } from '../../common/gqlclientconfig';
 import constant,{initDocumentstatus,newDocument} from '../constant';
 import { useCallback } from 'react';
 

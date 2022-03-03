@@ -18,7 +18,7 @@ import CurrentUserJWT from '../../../../common/queries/CurrentUserJWT';
 import usersQuery from '../../../../common/queries/usersQuery';
 import recommendationQuery from '../../../../common/queries/recommendationQuery'
 
-import {execGql,execGql_xx} from '../../../gqlclientconfig';
+import {execGql,execGql_xx} from '../../../../common/gqlclientconfig'
 const AUTH_USER = 'AUTH_USER';
 const UNAUTH_USER = 'UNAUTH_USER';
 const AUTH_ERROR = 'AUTH_ERROR';
