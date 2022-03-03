@@ -6,7 +6,7 @@ import { getValue, getDateYYYYMMDDHHMISS } from './validationlib';
 import { openDB, deleteDB, wrap, unwrap } from "idb";
 import axios from "axios";
 
-import { fileUrl,deleteUrl,uploadUrl,getfileUrl } from "../../shared/baseUrl";
+import { fileUrl,deleteUrl,uploadUrl,getfileUrl } from "../shared/baseUrl";
 
 const dbPromise = openDB("keyval-store", 1, {
   upgrade(db) {

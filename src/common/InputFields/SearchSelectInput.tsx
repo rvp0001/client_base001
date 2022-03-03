@@ -7,8 +7,8 @@ import {
   getDateYYYYMMDD,
   getDateYYYYMMDDHHMI,
   getFromToDate
-} from '../../validationlib';
-import { FlatInput } from '../Input/Input';
+} from '../validationlib';
+import { FlatInput } from '../InputFields/Input';
 interface Iinput {
   wd?: string
   label: string

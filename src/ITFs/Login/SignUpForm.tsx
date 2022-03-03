@@ -1,14 +1,14 @@
 import React, { useState,useCallback,useEffect,useMemo } from 'react'
-import { M_LeftIconRoundInput } from '../common/InputFields/RoundInput/RoundInput'
+import { M_LeftIconRoundInput } from '../../common/InputFields/RoundInput'
 import {M_SocialMediaLogin} from './SocialMediaLogin'
 import {ActionToDispatch,ActionToRedirect,handleSignUpJWT,checkCurrentUsernameJWT} from '../Redux/reducers/actions'
-import {checkTouched,nvl} from '../common/CommonLogic';
+import {checkTouched,nvl} from '../../common/CommonLogic';
 import {displaySubmitError,displayFieldError,runCheck,minLength10,
-  maxLength10,emailCheck,numberCheck,requiredCheck,maxLength128,minLength2} from '../common/validationlib';
+  maxLength10,emailCheck,numberCheck,requiredCheck,maxLength128,minLength2} from '../../common/validationlib';
 import {connect} from 'react-redux' 
 import ReCAPTCHA from "react-google-recaptcha";
 import {getCaptchaSitekey} from '../../shared/baseUrl'
-import Loader from '../common/Loader/Loader'
+import Loader from '../../common/Loader/Loader'
 
 
 const initobj = {

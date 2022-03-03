@@ -12,7 +12,7 @@ import UserListComponent from '../User/UserListComponent'
 import RecommendationList from '../recommendation/RecommendationList'
 import RecommendationComponent from '../recommendation/RecommendationComponent'
 import {BrowserRouter as Rounter, Route, Switch} from 'react-router-dom'
-import { SearchSelectInput } from '../common/InputFields/Select/SearchSelectInput'
+import { SearchSelectInput } from '../../common/InputFields/SearchSelectInput'
 
 const DashboardComponent = (props: any) => {
 const [loaderDisplay,setloaderDisplay] =useState(true)

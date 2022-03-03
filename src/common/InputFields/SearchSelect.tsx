@@ -7,7 +7,7 @@ import {
   getDateYYYYMMDD,
   getDateYYYYMMDDHHMI,
   getFromToDate
-} from '../../validationlib';
+} from '../validationlib';
 import Select from 'react-select'
 interface Iinput {
   wd?: string

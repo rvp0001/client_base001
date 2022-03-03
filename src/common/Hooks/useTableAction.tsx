@@ -1,7 +1,7 @@
 
 import {useState,useEffect} from 'react'
-import { execGql, execGql_xx } from '../gqlclientconfig';
-import constant,{initDocumentstatus,newDocument} from '../common/constant';
+import { execGql, execGql_xx } from '../../ITFs/gqlclientconfig';
+import constant,{initDocumentstatus,newDocument} from '../constant';
 import { useCallback } from 'react';
 
 function useTableAction(fetchGraphQuery:any, doctype:String,deleteGraphQuery:any) {

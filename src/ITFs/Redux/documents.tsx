@@ -1,6 +1,6 @@
 import * as ActionTypes from './ActionTypes'
 import shortid from 'shortid'
-import {filterCompanyData,getDocumenForSave} from '../common/CommonLogic'
+import {filterCompanyData,getDocumenForSave} from '../../common/CommonLogic'
 import * as doctypes from './Doctypes'
 
 //import { getValue,getDateYYYYMMDDHHMISS } from '../authsrc/commoncomponents/validationlib';

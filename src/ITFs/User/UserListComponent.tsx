@@ -1,12 +1,12 @@
 import React, { useMemo, useEffect, useState,useRef } from 'react'
 import { connect } from 'react-redux'
-import AddFabButton from '../common/Fab/AddFabButton'
-import Table from '../common/table/Table'
-import Column from '../common/table/Column'
+import AddFabButton from '../../common/InputFields/AddFabButton'
+import Table from '../../common/table/Table'
+import Column from '../../common/table/Column'
 import { Redirect, withRouter } from 'react-router-dom'
 import {addusers} from '../Redux/ActionCreators'
 import { getUsers1 } from '../Redux/reducers/actions'
-import {useAltKey,useKey} from '../common/shortcurkeys'
+import {useAltKey,useKey} from '../../common/shortcurkeys'
 export const UserListComponent = (props: any) => {
 
   const [docno, setDocno] = useState('NO-ID')

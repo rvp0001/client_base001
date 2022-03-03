@@ -6,12 +6,12 @@ import Column from '../common/table/Column'
 import { Redirect, withRouter } from 'react-router-dom'
 import {addusers} from '../Redux/ActionCreators'
 //import { getRecommendations } from '../Redux/reducers/actions'
-import useSaveAction from '../Hooks/useSaveAction'
+import useSaveAction from '../../common/Hooks/useSaveAction'
 import * as doctypes from '../common/Doctypes';
-import {useAltKey,useKey} from '../common/shortcurkeys'
+import {useAltKey,useKey} from '../../common/shortcurkeys'
 import Loader from '../common/Loader/Loader'
 import {handleDelete, getRecommendations,handleSave} from './CrudRecommendation'
-import Messagesnackbar from '../common/Alert/Alert'
+import Messagesnackbar from '../../common/Alert'
 import AlertDialog from '../common/PopupModals/ConfirmationModal'
 export const RecommendationListComponent = (props: any) => {
 const inpref:any = useRef(0)

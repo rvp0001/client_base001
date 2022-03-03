@@ -7,7 +7,7 @@ import {
   getDateYYYYMMDD,
   getDateYYYYMMDDHHMI,
   getFromToDate
-} from '../../validationlib';
+} from '../validationlib';
 interface Iinput {
   wd?: string
   label: string

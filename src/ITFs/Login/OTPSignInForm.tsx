@@ -1,12 +1,12 @@
 import React, { useState, useCallback,useEffect} from 'react'
-import { M_LeftIconRoundInput } from '../common/InputFields/RoundInput/RoundInput'
+import { M_LeftIconRoundInput } from '../../common/InputFields/RoundInput'
 import {M_SocialMediaLogin} from './SocialMediaLogin'
 import {connect} from 'react-redux'
 import {ActionToDispatch,ActionToRedirect,handleSignInJWT, checkCurrentUsernameJWT,handleMobileSignInJWT,handleVerifyMobileOTPJWT} from '../Redux/reducers/actions'
-import {displaySubmitError, runCheck,requiredCheck,maxLength128,minLength2,minLength6,maxLength6} from '../common/validationlib';
-import {checkTouched,nvl,checkItem,isCheckedbool,getDocumenForSave} from '../common/CommonLogic';
+import {displaySubmitError, runCheck,requiredCheck,maxLength128,minLength2,minLength6,maxLength6} from '../../common/validationlib';
+import {checkTouched,nvl,checkItem,isCheckedbool,getDocumenForSave} from '../../common/CommonLogic';
 import ReCAPTCHA from "react-google-recaptcha";
-import Loader from '../common/Loader/Loader'
+import Loader from '../../common/Loader/Loader'
 const initobj = {
   applicationid : "15001500", client: "45004500" ,  lang: "EN",
   mobile: '',

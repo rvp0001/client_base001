@@ -1,7 +1,7 @@
 import {useState,useCallback} from 'react'
-import { getDocumenForSave } from '../common/CommonLogic';
-import {initDocumentstatus,newDocument} from '../common/constant'
-import { execGql, execGql_xx } from '../gqlclientconfig';
+import { getDocumenForSave } from '../CommonLogic';
+import {initDocumentstatus,newDocument} from '../constant'
+import { execGql, execGql_xx } from '../../ITFs/gqlclientconfig';
 function useSaveAction( handleSave:any,handleSaveCheck:any,doctype:String,doctypetext:String,
   resetFocus:any,deleteGraphQuery:any ) {
   const [currentdocument, modifydocument] = useState({})

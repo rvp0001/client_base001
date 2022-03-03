@@ -1,22 +1,22 @@
 import { browserHistory } from 'react-router-dom';
 import { push } from 'react-router-redux';
 import gql from "graphql-tag";
-import SignOutUsername  from '../../../mutations/signOutUsername';
-import SignInUsername from '../../../mutations/signInUsername';
-import SignInUsernameJWT from '../../../mutations/signInUsernameJWT';
+import SignOutUsername  from '../../../../common/mutations/signOutUsername';
+import SignInUsername from '../../../../common/mutations/signInUsername';
+import SignInUsernameJWT from '../../../../common/mutations/signInUsernameJWT';
 
-import SignUpUsername from '../../../mutations/signUpUsername';
-import SignUpUsernameJWT from '../../../mutations/signUpUsernameJWT';
+import SignUpUsername from '../../../../common/mutations/signUpUsername';
+import SignUpUsernameJWT from '../../../../common/mutations/signUpUsernameJWT';
 
-import signUpMobileJWT from '../../../mutations/signUpMobileJWT';
-import verifyMobileOTPJWT from '../../../mutations/verifyMobileOTPJWT';
-import signInMobileJWT from '../../../mutations/signInMobileJWT';
+import signUpMobileJWT from '../../../../common/mutations/signUpMobileJWT';
+import verifyMobileOTPJWT from '../../../../common/mutations/verifyMobileOTPJWT';
+import signInMobileJWT from '../../../../common/mutations/signInMobileJWT';
 
 
-import CurrentUser from '../../../queries/CurrentUser';
-import CurrentUserJWT from '../../../queries/CurrentUserJWT';
-import usersQuery from '../../../queries/usersQuery';
-import recommendationQuery from '../../../queries/recommendationQuery'
+import CurrentUser from '../../../../common/queries/CurrentUser';
+import CurrentUserJWT from '../../../../common/queries/CurrentUserJWT';
+import usersQuery from '../../../../common/queries/usersQuery';
+import recommendationQuery from '../../../../common/queries/recommendationQuery'
 
 import {execGql,execGql_xx} from '../../../gqlclientconfig';
 const AUTH_USER = 'AUTH_USER';

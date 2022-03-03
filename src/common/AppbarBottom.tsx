@@ -1,6 +1,6 @@
 import React from 'react'
 import './AppbarBottom.css'
-import {useAltKey,useKey} from '../shortcurkeys'
+import {useAltKey,useKey} from './shortcurkeys'
 function AppbarBottom(props:any) {
   const { setAction,handleGoback }=props;
   useAltKey("c",() =>{setAction('clear')})

@@ -1,10 +1,10 @@
-import { getDocs, getDocconfig, getLblVal, checkTouched, nvl, checkItem, isCheckedbool, getDocumenForSave } from '../common/CommonLogic';
-import constant from '../common/constant'
-import recommendationsQuery from '../queries/recommendationQuery'
-import recommendationItems from '../queries/recommendationItemsQuery'
-import deleteRecommendation from '../mutations/DeleteRecommendation';
-import saveReccomendation from '../mutations/saveReccomendation';
-import sendRecommendationNotification from '../mutations/sendRecommendationNotification';
+import { getDocs, getDocconfig, getLblVal, checkTouched, nvl, checkItem, isCheckedbool, getDocumenForSave } from '../../common/CommonLogic';
+import constant from '../../common/constant'
+import recommendationsQuery from '../../common/queries/recommendationQuery'
+import recommendationItems from '../../common/queries/recommendationItemsQuery'
+import deleteRecommendation from '../../common/mutations/DeleteRecommendation';
+import saveReccomendation from '../../common/mutations/saveReccomendation';
+import sendRecommendationNotification from '../../common/mutations/sendRecommendationNotification';
 import { execGql, execGql_xx } from '../gqlclientconfig';
 
 export const handleSave = async (currentdocument: any) => {

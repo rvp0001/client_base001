@@ -1,14 +1,14 @@
 import React, { useMemo,useCallback } from 'react'
-import Table from '../common/table/Table'
-import Column from '../common/table/Column'
+import Table from '../../common/table/Table'
+import Column from '../../common/table/Column'
 import { Redirect, withRouter } from 'react-router-dom'
-import fetchGQL from '../queries/recommendationQuery'
-import deleteGQL from '../mutations/DeleteRecommendation'
-import useTableAction from '../Hooks/useTableAction'
-import {useAltKey,useKey} from '../common/shortcurkeys'
-import Loader from '../common/Loader/Loader'
-import Messagesnackbar from '../common/Alert/Alert'
-import AlertDialog from '../common/PopupModals/ConfirmationModal'
+import fetchGQL from '../../common/queries/recommendationQuery'
+import deleteGQL from '../../common/mutations/DeleteRecommendation'
+import useTableAction from '../../common/Hooks/useTableAction'
+import {useAltKey,useKey} from '../../common/shortcurkeys'
+import Loader from '../../common/Loader/Loader'
+import Messagesnackbar from '../../common/Alert'
+import AlertDialog from '../../common/PopupModals/ConfirmationModal'
 function RecommendationList() {
 
    const fetchquery = useMemo(()=>(fetchGQL),[1])

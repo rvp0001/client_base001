@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './datepicker.css'
-import { FlatInput } from '../InputFields/Input/Input'
+import { FlatInput } from './InputFields/Input'
 import shortid from 'shortid'
 import {
   setValue, getValue, getErrorValue, getErrorValueN, setCalValue,
@@ -9,7 +9,7 @@ import {
   getDateYYYYMMDD,
   getDateYYYYMMDDHHMI,
   getFromToDate
-} from '../validationlib';
+} from './validationlib';
 function DatePicker(props: any) {
   const [toggle, setToggle] = useState(false)
 

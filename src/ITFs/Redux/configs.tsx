@@ -1,12 +1,12 @@
 import * as ActionTypes from './ActionTypes'
-import {filterCompanyData} from '../common/CommonLogic'
+import {filterCompanyData} from '../../common/CommonLogic'
 import * as doctypes from './Doctypes';
 import {setValue,
     getValue,
     getErrorValue,
     getDtFormat,
     getDateYYYYMMDD
-} from '../common/validationlib';
+} from '../../common/validationlib';
 
 const getDefaultCompanySettings = ( ) =>{
 

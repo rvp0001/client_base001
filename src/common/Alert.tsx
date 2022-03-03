@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {useAltKey,useKey} from '../shortcurkeys'
+import {useAltKey,useKey} from './shortcurkeys'
 import './alert.css'
 function Alert({snackbaropen,snackbarseverity,handlesnackbarclose,snackbartext}:any) {
     const [displayAlert, setDisplayAlert] = useState(false);

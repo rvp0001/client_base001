@@ -28,7 +28,7 @@ import {
   getDateYYYYMMDDHHMI,
   getFromToDate,
 } from "./validationlib";
-import { fileUrl, deleteUrl, uploadUrl, getfileUrl } from "../../shared/baseUrl";
+import { fileUrl, deleteUrl, uploadUrl, getfileUrl } from "../shared/baseUrl";
 
 
 

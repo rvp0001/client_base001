@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import { M_MenuItem } from './MenuItem'
 import {connect} from 'react-redux'
-import {useAltKey,useKey} from '../../common/shortcurkeys'
+import {useAltKey,useKey} from '../../../common/shortcurkeys'
 import {Redirect,withRouter } from 'react-router-dom'
 import {handleSignoutUsernameJWT,checkCurrentUsernameJWT,ActionToDispatch,ActionToRedirect} from '../../Redux/reducers/actions'
 export function SideBar1(props: any) {

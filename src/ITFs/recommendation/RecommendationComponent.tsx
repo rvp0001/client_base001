@@ -1,28 +1,28 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
-import DatePicker from '../common/DatePicker/DatePicker'
-import { FlatInput } from '../common/InputFields/Input/Input'
-import { SelectInput } from '../common/InputFields/Select/Select'
-import { SearchSelectInput } from '../common/InputFields/Select/SearchSelect'
-import * as doctypes from '../common/Doctypes';
-import { getDocs, getDocconfig, getLblVal, checkTouched, nvl, checkItem, isCheckedbool, getDocumenForSave } from '../common/CommonLogic';
-import useSaveAction from '../Hooks/useSaveAction'
+import DatePicker from '../../common/DatePicker'
+import { FlatInput } from '../../common/InputFields/Input'
+import { SelectInput } from '../../common/InputFields/Select'
+import { SearchSelectInput } from '../../common/InputFields/SearchSelect'
+import * as doctypes from '../../common/Doctypes';
+import { getDocs, getDocconfig, getLblVal, checkTouched, nvl, checkItem, isCheckedbool, getDocumenForSave } from '../../common/CommonLogic';
+import useSaveAction from '../../common/Hooks/useSaveAction'
 import { handleDelete, getRecommendations, handleSave,handlesendRecommendationNotification } from './CrudRecommendation'
-import Messagesnackbar from '../common/Alert/Alert'
-import AlertDialog from '../common/PopupModals/ConfirmationModal'
+import Messagesnackbar from '../../common/Alert'
+import AlertDialog from '../../common/PopupModals/ConfirmationModal'
 import {
   runCheck, requiredCheck, getDtFormat, getTimeFormat, getFromToDate, getDateYYYYMMDDHHMI, getDateYYYYMMDD, maxLength40, maxLength128,
   setErrorValue, getValue, setValue
-} from '../common/validationlib';
+} from '../../common/validationlib';
 import { Redirect, withRouter } from 'react-router-dom'
-import AppbarBottom from '../common/AppBarBottom/AppbarBottom'
-import { initDocumentstatus } from '../common/constant'
+import AppbarBottom from '../../common/AppbarBottom'
+import { initDocumentstatus } from '../../common/constant'
 import { fetchStocks, addstocks } from '../Redux/ActionCreators'
 import { connect } from 'react-redux';
 import * as ActionTypes from '../Redux/ActionTypes'
-import Loader from '../common/Loader/Loader'
-import deleteGQL from '../mutations/DeleteRecommendation'
-import { FileuploadComponent } from '../common/FileuploadComponent'
-import { OnlineFileuploadComponent } from '../common/OnlineFileuploadComponent'
+import Loader from '../../common/Loader/Loader'
+import deleteGQL from '../../common/mutations/DeleteRecommendation'
+import { FileuploadComponent } from '../../common/FileuploadComponent'
+import { OnlineFileuploadComponent } from '../../common/OnlineFileuploadComponent'
 import shortid from 'shortid'
 
 const newDocument = (doctype: String, doctypetext: String) => {
