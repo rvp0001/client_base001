@@ -74,9 +74,8 @@ async componentDidMount(){
      
             return    (
                 <Router>
-                <div>
                 <DashboardComponent/>
-                </div>
+               
                 </Router>
               )
 
@@ -86,14 +85,14 @@ async componentDidMount(){
             return    (
                 <Router>
         
-                <div>
+            
            
                  <HomeComponent/>
-                </div>
-                <Switch>
+                
+                {/* <Switch>
              <Route key={100} path={"/"} exact={true} children={<HomeComponent/>}/>
             
-                </Switch>
+                </Switch> */}
                 </Router>
               )
           }
