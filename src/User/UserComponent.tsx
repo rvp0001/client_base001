@@ -171,22 +171,23 @@ export const UserComponent = (props: any) => {
    }
   const [setDocumentAction,documentstatus,setDocumentstatus,currentdocument,modifydocument,redirect, goBack,closeSnackBar,loaderDisplay, setloaderDisplay]:any = useSaveAction(handleSave,handleSaveCheck,doctype,doctypetext,resetFocus,deleteUser)
   const inpref:any = useRef(0)
-     useEffect(() => {
-      let z_id=new URLSearchParams(props.location.search).get("z_id")
+  let z_id=new URLSearchParams(props.location.search).get("z_id")  
+  useEffect(() => {
+      
        if(z_id!='NO-ID')
         {
-          setloaderDisplay(!loaderDisplay)
+          setloaderDisplay(true)
          const curdoc= props.users.find((document:any)=>document.z_id==z_id)
-         setloaderDisplay(loaderDisplay)
+         setloaderDisplay(false)
          modifydocument(curdoc)
         }
         if(z_id=='NO-ID'){modifydocument(newDocument(doctype,doctypetext))}
         inpref?.current?.focus()
         return () => {      
         }
-    }, [])
+    }, [z_id])
     
-    
+    console.log("documentstatus===>2",documentstatus)
     
   
   const {action,yesaction,noaction,dailogtext,dailogtitle} = documentstatus;
@@ -279,4 +280,4 @@ callback();
     }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(UserComponent))
+export default React.memo(withRouter(connect(mapStateToProps, mapDispatchToProps)(UserComponent)))

@@ -6,17 +6,17 @@ import { useCallback } from 'react';
 
 function useTableAction(fetchGraphQuery:any, doctype:String,deleteGraphQuery:any) {
     const [tableData, setTableData] = useState([])
-    const [loaderDisplay, setloaderDisplay] = useState(false) 
+    const [loaderDisplay, setloaderDisplay] = useState(true) 
     const [docno, setDocno] = useState('NO-ID')
     const [redirect, setRedirect] = useState(false)
     const [documentstatus, setDocumentstatus] = useState(initDocumentstatus)
     const values = {...constant}
    useEffect(() => {
-    setloaderDisplay(!loaderDisplay) 
+     
     getTableData().then((data:any)=>{
       
            setTableData(data)
-           setloaderDisplay(loaderDisplay)         
+           setloaderDisplay(false)         
        });
      return () => {
        

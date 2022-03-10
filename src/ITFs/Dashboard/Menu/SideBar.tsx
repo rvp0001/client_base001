@@ -148,4 +148,4 @@ export function SideBar1(props: any) {
   )
 }
 
-export const SideBar= withRouter(connect(null,{ ActionToDispatch,ActionToRedirect})(SideBar1))
+export const SideBar= React.memo(withRouter(connect(null,{ ActionToDispatch,ActionToRedirect})(SideBar1)))

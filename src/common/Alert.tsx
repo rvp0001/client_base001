@@ -4,9 +4,10 @@ import './alert.css'
 function Alert({snackbaropen,snackbarseverity,handlesnackbarclose,snackbartext}:any) {
     const [displayAlert, setDisplayAlert] = useState(false);
     useEffect(() => {
+        if(snackbaropen){
         setDisplayAlert(snackbaropen)
        const timer = setTimeout(()=>{handlesnackbarclose();setDisplayAlert(false)},5000)
-       return () => clearTimeout(timer);
+       return () => clearTimeout(timer);}
     }, [snackbaropen])
     return (
         <div className={displayAlert?`alert ${snackbarseverity} show`:`alert ${snackbarseverity} hide`}>

@@ -37,4 +37,4 @@ function AppbarBottom(props:any) {
   )
 }
 
-export default AppbarBottom
+export default React.memo(AppbarBottom)

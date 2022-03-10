@@ -8,6 +8,7 @@ import FormComponent from './components/Elements/FormComponent'
 import Dashboard from './ITFs/Dashboard/Dashboard'
 import Login from './ITFs/Login/Login'
 import {AuthorisationswitchComponent} from './ITFs/Login/AuthorisationswitchComponent'
+import React from 'react'
 const {persistor,store} = ConfigureStore();
 
 /*
@@ -27,8 +28,9 @@ export const App = () => {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
+      <React.StrictMode>
  <AuthorisationswitchComponent/>
-
+</React.StrictMode>
  {/* <Login/> */}
     </PersistGate>
     </Provider>
