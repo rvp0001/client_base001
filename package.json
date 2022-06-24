@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-    "web-push":"web-push"
+    "web-push": "web-push"
   },
   "proxy": "http://localhost:7501/",
   "keywords": [],
@@ -76,9 +76,9 @@
     "react-refresh": "^0.10.0",
     "style-loader": "^2.0.0",
     "typescript": "^4.2.4",
-    "webpack": "^5.45.1",
+    "webpack": "^5.73.0",
     "webpack-bundle-analyzer": "^4.4.1",
-    "webpack-cli": "^4.6.0",
+    "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3",
     "workbox-webpack-plugin": "^6.4.2"

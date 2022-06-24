@@ -13,6 +13,7 @@ import RecommendationList from '../recommendation/RecommendationList'
 import RecommendationComponent from '../recommendation/RecommendationComponent'
 import {BrowserRouter as Rounter, Route, Switch} from 'react-router-dom'
 import { SearchSelectInput } from '../../common/InputFields/SearchSelectInput'
+import Stepperimp from '../../common/Stepper/stepperimp'
 
 const DashboardComponent = (props: any) => {
 const [loaderDisplay,setloaderDisplay] =useState(true)
@@ -55,7 +56,12 @@ function Dashboard(props: any) {
             <Route exact path="/recommendationedit">
               <RecommendationComponent {...props}/>
             </Route>
-          
+            <Route exact path="/recommendationedit">
+              <RecommendationComponent {...props}/>
+            </Route>
+            <Route exact path="/Task">
+              <Stepperimp {...props}/>
+            </Route>
           </Switch>
         </main>
       </div>

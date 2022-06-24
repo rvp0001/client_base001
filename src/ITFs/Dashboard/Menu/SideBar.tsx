@@ -52,7 +52,7 @@ export function SideBar1(props: any) {
     {
       name: 'Tasks',
       component: '',
-      slug: '',
+      slug: '/Task',
       iconName: 'las la-clipboard-list',
       active: '',
     },
