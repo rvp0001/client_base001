@@ -3,12 +3,13 @@ import {Provider} from 'react-redux'
 import {ConfigureStore} from './ITFs/Redux/configureStore'
 import FormJson from './formElement.json'
 import { PersistGate } from 'redux-persist/integration/react'
-import FormContextProvider from './FormContext'
-import FormComponent from './components/Elements/FormComponent'
+
+
 import Dashboard from './ITFs/Dashboard/Dashboard'
 import Login from './ITFs/Login/Login'
-import {AuthorisationswitchComponent} from './ITFs/Login/AuthorisationswitchComponent'
+import {AuthorisationswitchComponent} from './Login/AuthorisationswitchComponent'
 import React from 'react'
+import {Systems} from './TSS/Systems/Systems'
 const {persistor,store} = ConfigureStore();
 
 /*
@@ -29,7 +30,8 @@ export const App = () => {
     <Provider store={store}>
       <PersistGate persistor={persistor}>
       <React.StrictMode>
- <AuthorisationswitchComponent/>
+        
+ <AuthorisationswitchComponent/> 
 </React.StrictMode>
  {/* <Login/> */}
     </PersistGate>
