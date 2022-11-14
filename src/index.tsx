@@ -1,4 +1,4 @@
-import ReactDom from 'react-dom'
+import ReactDom from 'react-dom' //test 20221114
 import { App } from './App'
 import './common/common.css'
 if ('serviceWorker' in navigator) {
