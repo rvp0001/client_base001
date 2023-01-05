@@ -41,7 +41,7 @@ useAltKey("n",() =>{setDocStatus("NO-ID",true)})
   } else
     return (
       <div className="projects">
-        <div className="card">
+        <div className="card_itss">
           <div className="card-body">
             
               <Table

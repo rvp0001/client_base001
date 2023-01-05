@@ -29,7 +29,7 @@ export function Input(props: Iinput) {
     }
   }
   return (
-    <div className={`col-${wd}`}>
+    <div className={`col_itss-${wd}`}>
        <div className="container">
       <h2>Video Category</h2>
 

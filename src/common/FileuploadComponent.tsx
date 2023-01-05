@@ -119,10 +119,10 @@ export const FileuploadComponent = React.memo(props => {
 
   return (
     <div>
-      <div className="row">
+      <div className="row_itss">
 
 
-        <div className="row">
+        <div className="row_itss">
           <form onSubmit={handleSubmit}>
             <h3>React Multiple File Upload</h3>
             <div className="form-group">

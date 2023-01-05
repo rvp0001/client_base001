@@ -4,7 +4,7 @@ function Projects() {
   console.log('in Projects')
   return (
     <div className="projects">
-      <div className="card">
+      <div className="card_itss">
         <div className="card-header">
           <h3>Recent Project</h3>
           <button>

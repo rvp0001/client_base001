@@ -26,12 +26,12 @@
 
 .checkbox-container label:hover::before,
 .checkbox-container input[type='checkbox']:hover + label::before {
-  background-color: var(--button-primaryFocus);
+  background-color: var(--button_itss-primaryFocus);
 }
 
 .checkbox-container input[type='checkbox']:checked + label::before {
   content: '\002714';
-  background-color: var(--field-color);
+  background-color: var(--field_itss-color);
   font-size: 16px;
   color: white;
   display: flex;

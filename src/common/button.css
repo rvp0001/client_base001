@@ -12,7 +12,7 @@
   border-radius: 5px;
   line-height: 1;
   outline: none;
-  background-color: var(--button-primary);
+  background-color: var(--button_itss-primary);
   color: white;
   cursor: pointer;
   transition: all 0.3s linear;
@@ -22,11 +22,11 @@
 
 .btn1:hover,
 .btn1:focus {
-  background-color: var(--button-primaryFocus);
+  background-color: var(--button_itss-primaryFocus);
 }
 
 .btn1:active {
-  background-color: var(--button-primaryActive);
+  background-color: var(--button_itss-primaryActive);
 }
 
 .btn-deault {
@@ -37,8 +37,8 @@
   border-radius: 5px;
   line-height: 1;
   outline: none;
-  background-color: var(--default-color);
-  color: var(--dark-color);
+  background-color: var(--default_itss-color);
+  color: var(--dark_itss-color);
   cursor: pointer;
   transition: all 0.3s linear;
   letter-spacing: 2px;
@@ -47,10 +47,10 @@
 
 .btn-deault:hover,
 .btn-default:focus {
-  background-color: var(--defaultFocus-color);
+  background-color: var(--defaultFocus_itss-color);
 }
 .btn-deault:active {
-  background-color: var(--defaultActive-color);
+  background-color: var(--defaultActive_itss-color);
 }
 
 .btn-large {
@@ -65,13 +65,13 @@
 }
 .btn-outline {
   display: block;
-  border: 1px solid var(--field-color);
+  border: 1px solid var(--field_itss-color);
   font-weight: 500;
   border-radius: 5px;
   line-height: 1;
   outline: none;
   background-color: white;
-  color: var(--field-color);
+  color: var(--field_itss-color);
   cursor: pointer;
   transition: all 0.3s linear;
 }

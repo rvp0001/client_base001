@@ -9,22 +9,22 @@ thead tr{
 
 thead td{
     font-weight: 700;
-    border: 1px solid var(--quarterly-color)
+    border: 1px solid var(--quarterly_itss-color)
 }
 td{
     padding:.1rem 1rem;
     font-size: .9rem;
-    color: var(--secondary-color);
-    border: 1px solid var(--table-border-color)
+    color: var(--secondary_itss-color);
+    border: 1px solid var(--table_itss-border-color)
 }
 .pagination{
     display: flex;
     width: 100%;
     justify-content: center;
  
-    border-bottom: 1px solid var(--table-border-color);
-    border-left: 1px solid var(--table-border-color);
-    border-right: 1px solid var(--table-border-color);
+    border-bottom: 1px solid var(--table_itss-border-color);
+    border-left: 1px solid var(--table_itss-border-color);
+    border-right: 1px solid var(--table_itss-border-color);
     padding: 7px;
 }
 
@@ -52,8 +52,8 @@ td{
     text-align: center;
     font-size: 18px;
     margin: 2px;
-    color:var(--secondary-color);
-    background:(--quarterly-color)
+    color:var(--secondary_itss-color);
+    background:(--quarterly_itss-color)
 }
 
 .pageination-section{
@@ -89,7 +89,7 @@ td{
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 1rem;
-    color: var(--secondary-color);
+    color: var(--secondary_itss-color);
 }
 
 .table-button.danger {
@@ -97,7 +97,7 @@ td{
 }   
 
 .table-button.submit {       
-    color: var(--third-color);         
+    color: var(--third_itss-color);         
 }   
    
 .table-button{
@@ -105,7 +105,7 @@ td{
     padding: 7px;
     text-align: center;
     border-radius: 5px;
-    color: var(--quarterly-color);
+    color: var(--quarterly_itss-color);
     width: 40px; 
     margin: 2px; 
     cursor: pointer;
@@ -117,18 +117,18 @@ td{
 }    
 
 /* tr {
-    border: 1px solid (--quarterly-color);
+    border: 1px solid (--quarterly_itss-color);
 } */
 
 thead tr td {
-    background-color: var(--main-color);
-    color: var(--quarterly-color);
+    background-color: var(--main_itss-color);
+    color: var(--quarterly_itss-color);
     padding: 10px;
-    border:1px solid var(--main-color)
+    border:1px solid var(--main_itss-color)
 }
 
 /* tr:nth-child(even) {
-    background-color: var(--quarterly-color);
+    background-color: var(--quarterly_itss-color);
 } */
 
 tr:hover {
@@ -139,7 +139,7 @@ tr:hover {
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-color:var(--secondary-color);
+color:var(--secondary_itss-color);
 }
 
 .card-header .table-header-text span{
@@ -151,8 +151,8 @@ color:var(--secondary-color);
     outline: none;
     border-width: 0;
     border-style: none;
-    border: 1px solid var(--table-border-color);
-    color: var(--secondary-color);
+    border: 1px solid var(--table_itss-border-color);
+    color: var(--secondary_itss-color);
     padding-left: 10px;
 }
 .goble-search input::placeholder{
@@ -161,15 +161,15 @@ color:var(--secondary-color);
 
 .goble-search i{
     padding:12px;
-    background: var(--main-color);
+    background: var(--main_itss-color);
     color: #FBFFFF;
 }
 
 .tabel-add-button{
     background: transparent !important;
-    color: var(--main-color) !important;
+    color: var(--main_itss-color) !important;
     border-radius: 5px !important;
-    border: 1px solid var(--main-color) !important;
+    border: 1px solid var(--main_itss-color) !important;
     font-weight: 400;
     letter-spacing: 2px;
 }

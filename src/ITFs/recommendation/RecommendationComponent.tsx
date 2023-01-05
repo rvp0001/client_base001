@@ -164,51 +164,51 @@ export const RecommendationComponent = (props: any) => {
       <>
         <Loader display={loaderDisplay} />
         <div className="container">
-          <div className="grid">
+          <div className="grid_itss">
      
-            <div className="row">
+            <div className="row_itss">
               <SearchSelectInput inpref={compinp} wd="3" label="" options={M_stocklist} name="name" currdoc={currentdocument1} section={'name'} modifydoc={modifydocument} refresh={getStockcmp} />
               <DatePicker wd="3" label="Recommendation Date" name="recodate" currdoc={currentdocument1} section={'recodate'} modifydoc={modifydocument} format="yyyymmdd" />
               <FlatInput wd="3" label="Current market price" name="cmp" currdoc={currentdocument1} section={'cmp'} modifydoc={modifydocument} />
-              <div className={"col-3"}></div>
+              <div className={"col_itss-3"}></div>
             </div>
-            <div className="row">
+            <div className="row_itss">
               <FlatInput wd="3" label="Add Up To" name="addupto" currdoc={currentdocument1} section={'addupto'} modifydoc={modifydocument} />
               <FlatInput wd="3" label="Stop Loss" name="sl" currdoc={currentdocument1} section={'sl'} modifydoc={modifydocument} />
-              <div className={"col-6"}></div>
+              <div className={"col_itss-6"}></div>
             </div>
-            <div className="row">
+            <div className="row_itss">
               <FlatInput wd="3" label="Weightage" name="weightage" currdoc={currentdocument1} section={'weightage'} modifydoc={modifydocument} />
               <SelectInput wd="3" label="Time Frame" options={timeframeoptions} name="timeframe" currdoc={currentdocument1} section={'timeframe'} modifydoc={modifydocument} />
-              <div className={"col-3"}></div>
-              <div className={"col-3"}></div>
+              <div className={"col_itss-3"}></div>
+              <div className={"col_itss-3"}></div>
             </div>
-            <div className="row">
+            <div className="row_itss">
               <FlatInput wd="3" label="Target 1" name="target1" currdoc={currentdocument1} section={'target1'} modifydoc={modifydocument} />
               <FlatInput wd="3" label="Target 2" name="target2" currdoc={currentdocument1} section={'target2'} modifydoc={modifydocument} />
               <FlatInput wd="3" label="Target 3" name="target3" currdoc={currentdocument1} section={'target3'} modifydoc={modifydocument} />
-              <div className={"col-3"}></div>
+              <div className={"col_itss-3"}></div>
             </div>
-            <div className="row">
+            <div className="row_itss">
               <FlatInput wd="3" label="Target 4" name="target4" currdoc={currentdocument1} section={'target4'} modifydoc={modifydocument} />
               <FlatInput wd="3" label="Target 5" name="target5" currdoc={currentdocument1} section={'target5'} modifydoc={modifydocument} />
               <FlatInput wd="3" label="Target 6" name="target6" currdoc={currentdocument1} section={'target6'} modifydoc={modifydocument} />
-              <div className={"col-3"}></div>
+              <div className={"col_itss-3"}></div>
             </div>
-            <div className="row">
+            <div className="row_itss">
               <FlatInput wd="3" label="Target 7" name="target7" currdoc={currentdocument1} section={'target7'} modifydoc={modifydocument} />
               <FlatInput wd="3" label="Target 8" name="target8" currdoc={currentdocument1} section={'target8'} modifydoc={modifydocument} />
               <FlatInput wd="3" label="Target 9" name="target9" currdoc={currentdocument1} section={'target9'} modifydoc={modifydocument} />
-              <div className={"col-3"}></div>
+              <div className={"col_itss-3"}></div>
             </div>
  
-            <div className="row">
+            <div className="row_itss">
             <button onClick={()=>{handlesendRecommendationNotification(currentdocument1)}}>
                   Send Notication 
             </button>
             </div>
 
-               <div className="row">
+               <div className="row_itss">
               <OnlineFileuploadComponent
                 section={'reffiles'}
                 autoupload={true}

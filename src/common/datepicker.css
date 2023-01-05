@@ -101,7 +101,7 @@
 
 .date-picker .date-button-container {
   /* padding: 15px 0px; */
-  border-top: 1px solid var(--text-grey);
+  border-top: 1px solid var(--text_itss-grey);
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
@@ -121,6 +121,6 @@
 }
 
 .date-ok-button {
-  color: var(--field-color);
+  color: var(--field_itss-color);
   font-weight: 600;
 }

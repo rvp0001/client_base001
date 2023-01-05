@@ -31,7 +31,7 @@ export function SearchSelect(props: any) {
   }
   let yz=getValue(currdoc,section)
   return (<>
-  <div className={`col-${wd}`}>
+  <div className={`col_itss-${wd}`}>
     <div style={{display:'flex'}}>
     <span style={{flex:11}}><Select  
     name={name}

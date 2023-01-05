@@ -42,10 +42,10 @@ export const OnlineFileuploadComponent = React.memo(props => {
 
     return (
         <div>
-            <div className="row">
+            <div className="row_itss">
 
 
-                <div className="row">
+                <div className="row_itss">
                     <form >
                         <h3>Online Multiple File Upload</h3>
                         <div className="form-group">

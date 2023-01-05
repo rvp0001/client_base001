@@ -267,8 +267,8 @@ export function OTPSignInForm(props:any) {
       </>:<>
       <M_LeftIconRoundInput  modifydoc={M_updateUser} iconClass="fas fa-user" name="mobile" placeholder="Mobile No." currdoc={user} section={"mobile"} label="user name" wd={"12"} />
       <M_LeftIconRoundInput  modifydoc={M_updateUser} iconClass="fas fa-lock" name="otp" placeholder="Enter OTP" currdoc={user} section={"otp"} label="" wd={"12"} type="password" />
-           <div className="row">
-             <div style={{ display: 'flex', width: "130px", color: "var(--main-color)", cursor: "pointer" }} onClick={() => { handleSubmit(user) }}>
+           <div className="row_itss">
+             <div style={{ display: 'flex', width: "130px", color: "var(--main_itss-color)", cursor: "pointer" }} onClick={() => { handleSubmit(user) }}>
                <span style={{ flex: "10" }}>Resend OTP</span>
                <span className="las la-sync" style={{ flex: 2, height: "100%", fontSize: "1rem", padding: "5px 0 0 0" }} />
              </div>

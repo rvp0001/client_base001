@@ -169,7 +169,7 @@ function DatePicker(props: any) {
   }
   return (
     <div
-      className={`date-picker col-${wd}`}
+      className={`date-picker col_itss-${wd}`}
       onClick={!toggle ? toggleDatePicker : () => {}}
     >
       {/* <div className="selected-date">{formatDate(finalDate,"")}</div> */}

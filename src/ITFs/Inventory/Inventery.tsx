@@ -10,17 +10,17 @@ import DatePicker from '../common/DatePicker/DatePicker'
 export default function Inventery(props: any) {
   return (
     <div className="container">
-      <div className="grid">
-        <div className="row">
+      <div className="grid_itss">
+        <div className="row_itss">
           <Input wd="4" label="User Name" name="username" value="" />
           <Input wd="4" label="User Name" name="username" value="" />
           <Input wd="4" label="User Name" name="username" value="" />
         </div>
-        <div className="row">
+        <div className="row_itss">
           <Input wd="8" label="User Name" name="username" value="" />
           <Input wd="4" label="User Name" name="username" value="" />
         </div>
-        <div className="row">
+        <div className="row_itss">
           <Input wd="2" label="User Name" name="username" value="" />
           <Input wd="2" label="User Name" name="username" value="" />
           <Input wd="2" label="User Name" name="username" value="" />
@@ -28,25 +28,25 @@ export default function Inventery(props: any) {
           <Input wd="2" label="User Name" name="username" value="" />
           <Input wd="2" label="User Name" name="username" value="" />
         </div>
-        <div className="row">
+        <div className="row_itss">
           <Input wd="2" label="User Name" name="username" value="" />
           <Input wd="2" label="User Name" name="username" value="" />
           <Input wd="2" label="User Name" name="username" value="" />
           <Input wd="3" label="User Name" name="username" value="" />
           <Input wd="3" label="User Name" name="username" value="" />
         </div>
-        <div className="row">
+        <div className="row_itss">
           <Input wd="3" label="User Name" name="username" value="" />
           <Input wd="3" label="User Name" name="username" value="" />
           <Input wd="3" label="User Name" name="username" value="" />
           <Input wd="3" label="User Name" name="username" value="" />
         </div>
-        <div className="row">
+        <div className="row_itss">
           <Input wd="3" label="User Name" name="username" value="" />
           <Input wd="3" label="User Name" name="username" value="" />
           <Input wd="6" label="User Name" name="username" value="" />
         </div>
-        <div className="row">
+        <div className="row_itss">
           <Input wd="4" label="User Name" name="username" value="" />
           <Input wd="2" label="User Name" name="username" value="" />
           <Select
@@ -67,12 +67,12 @@ export default function Inventery(props: any) {
             groupname="gender"
             id="mentionnot"
           ></Radio>
-          <div className="col-6"></div>
+          <div className="col_itss-6"></div>
         </RadioGroup>
 
-        <div className="row">
+        <div className="row_itss">
           <Checkbox wd="3" />
-          <div className="col-3"></div>
+          <div className="col_itss-3"></div>
           <Button
             wd="2"
             label="Clear"
@@ -92,8 +92,8 @@ export default function Inventery(props: any) {
             className="btn1 btn-small"
           />
         </div>
-        <div className="row">
-          <div className="col-4">
+        <div className="row_itss">
+          <div className="col_itss-4">
             <DatePicker {...props} />
           </div>
         </div>

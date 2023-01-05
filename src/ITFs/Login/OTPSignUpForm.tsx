@@ -288,8 +288,8 @@ const ResendOTP=(currentdocument:any)=>{
      
       <input type="button" value="Register" className="btn solid" onClick={()=>{handleSubmit(user)} }  disabled = {captcha ? "" : "disabled"}/></>:
       <><M_LeftIconRoundInput  modifydoc={M_updateUser} iconClass="fas fa-lock" name="otp" placeholder="OTP" currdoc={user} section={"otp"} label="mobile" wd={"12"} type="password"/> 
-      <div className="row">
-             <div style={{ display: 'flex', width: "130px", color: "var(--main-color)", cursor: "pointer" }} onClick={() => { ResendOTP(user) }}>
+      <div className="row_itss">
+             <div style={{ display: 'flex', width: "130px", color: "var(--main_itss-color)", cursor: "pointer" }} onClick={() => { ResendOTP(user) }}>
                <span style={{ flex: "10" }}>Resend OTP</span>
                <span className="las la-sync" style={{ flex: 2, height: "100%", fontSize: "1rem", padding: "5px 0 0 0" }} />
              </div>

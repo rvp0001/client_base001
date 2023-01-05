@@ -35,11 +35,11 @@
   justify-content: space-between;
 }
 
-.user-details .input-box {
+.user-details .input_itss-box {
   width: calc(100% / 4 - 20px);
 }
 
-.user-details .input-box input {
+.user-details .input_itss-box input {
   height: 45px;
   width: 100%;
 }

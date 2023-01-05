@@ -201,35 +201,35 @@ export const UserComponent = (props: any) => {
     <>
     <Loader display={loaderDisplay}/>
     <div className="container">
-      <div className="grid">
-        <div className="row">
+      <div className="grid_itss">
+        <div className="row_itss">
 
           <FlatInput inpref={inpref} wd="3" label="First Name" name="firstname" currdoc={currentdocument} section={'firstname'} modifydoc={modifydocument} />
           <FlatInput wd="3" label="Last Name" name="lastname" currdoc={currentdocument} section={'lastname'} modifydoc={modifydocument} />
           <FlatInput wd="6" label="Display Name" name="displayname" currdoc={currentdocument} section={'displayname'} modifydoc={modifydocument} />
         </div>
-        <div className="row">
+        <div className="row_itss">
           <FlatInput wd="3" label="User Name" name="username" currdoc={currentdocument} section={'username'} modifydoc={modifydocument} />
           <FlatInput wd="3" label="Password" name="password" currdoc={currentdocument} section={'password'} modifydoc={modifydocument} />
           <FlatInput wd="3" label="Re-Type Password" name="password" currdoc={currentdocument} section={'repeatpassword'} modifydoc={modifydocument} />
-          <div className={"col-3"}></div>
+          <div className={"col_itss-3"}></div>
         </div>
-        <div className="row">
+        <div className="row_itss">
           <FlatInput wd="3" label="Email" name="email" currdoc={currentdocument} section={'email'} modifydoc={modifydocument} />
           <FlatInput wd="3" label="Mobile" name="mobile" currdoc={currentdocument} section={'mobile'} modifydoc={modifydocument} />
           <FlatInput wd="3" label="Phone No." name="phone" currdoc={currentdocument} section={'phone'} modifydoc={modifydocument} />
-          <div className={"col-3"}></div>
+          <div className={"col_itss-3"}></div>
         </div>
-        <div className="row">
+        <div className="row_itss">
           <SelectInput wd="3" label="User Sex" options={usexoptions} name="usex" currdoc={currentdocument} section={'usex'} modifydoc={modifydocument} />
           {/* <DatePicker wd="3" label="Date of birth"  name="dateofbirth"  currdoc={currentdocument} section={'dateofbirth'} modifydoc={modifydocument} /> */}
-          <div className={"col-6"}></div>
-          <div className={"col-3"}></div>
+          <div className={"col_itss-6"}></div>
+          <div className={"col_itss-3"}></div>
         </div>
-        <div className="row">
+        <div className="row_itss">
           <FlatInput wd="12" label="Address" name="address" currdoc={currentdocument} section={'address'} modifydoc={modifydocument} />
         </div>
-        <div className="row">
+        <div className="row_itss">
           <FlatInput wd="3" label="Pin Code" name="pincode" currdoc={currentdocument} section={'pincode'} modifydoc={modifydocument} />
           <FlatInput wd="3" label="City" name="city" currdoc={currentdocument} section={'city'} modifydoc={modifydocument} />
           <FlatInput wd="3" label="State" name="state" currdoc={currentdocument} section={'state'} modifydoc={modifydocument} />

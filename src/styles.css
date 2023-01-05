@@ -4,24 +4,24 @@
 #5fa8d3
 */
 :root {
-  /* --main-color:#DD2F6E;  */
-  /* --main-color:#a62956; */
-  /* --main-color: #0b8583; */
-    --main-color:#00ADB5;
-    --secondary-color:#848484;
-    --third-color:#00ADB5;
-    --quarterly-color:#FBFFFF;
-    --table-border-color:#e9e8e8;
-  --dark-color: #1d2231;
-  --text-grey: #8390a2;
-  --error-color: #f21a1d;
-  --field-color: #0c757a;
-  --default-color: #bfbfbf;
-  --defaultFocus-color: #ececec;
-  --defaultActive-color: #dedede;
-  --button-primary: #00ADB5;
-  --button-primaryFocus: #005c99;
-  --button-primaryActive: #003659;
+  /* --main_itss-color:#DD2F6E;  */
+  /* --main_itss-color:#a62956; */
+  /* --main_itss-color: #0b8583; */
+    --main_itss-color:#00ADB5;
+    --secondary_itss-color:#848484;
+    --third_itss-color:#00ADB5;
+    --quarterly_itss-color:#FBFFFF;
+    --table_itss-border-color:#e9e8e8;
+  --dark_itss-color: #1d2231;
+  --text_itss-grey: #8390a2;
+  --error_itss-color: #f21a1d;
+  --field_itss-color: #0c757a;
+  --default_itss-color: #bfbfbf;
+  --defaultFocus_itss-color: #ececec;
+  --defaultActive_itss-color: #dedede;
+  --button_itss-primary: #00ADB5;
+  --button_itss-primaryFocus: #005c99;
+  --button_itss-primaryActive: #003659;
 }
 
 * {
@@ -39,14 +39,14 @@
   left: 0;
   top: 0;
   height: 100%;
-  background-color: var(--main-color);
+  background-color: var(--main_itss-color);
   z-index: 100;
   transition: width 300ms;
 }
 .sidebar-brand {
   height: 90px;
   padding: 1rem 0rem 1rem 2rem;
-  color: var(--quarterly-color);
+  color: var(--quarterly_itss-color);
 }
 
 .sidebar-brand span {
@@ -67,16 +67,16 @@
 .sidebar-menu a {
   padding-left: 1rem;
   display: block;
-  color: var(--quarterly-color);
+  color: var(--quarterly_itss-color);
   font-size: 1.1rem;
 }
 .sidebar-menu a.active {
-  background-color: var(--quarterly-color);
+  background-color: var(--quarterly_itss-color);
   padding-top: 1rem;
   padding-bottom: 1rem;
-  color: var(--main-color);
+  color: var(--main_itss-color);
   border-radius: 30px 0px 0px 30px;
-  color: var(--main-color);
+  color: var(--main_itss-color);
 }
 
 .sidebar-menu a span:first-child {
@@ -134,7 +134,7 @@ header {
   display: none;
 }
 header h2 {
-  color: var(--secondary-color);
+  color: var(--secondary_itss-color);
 }
 header label span {
   font-size: 1.7rem;
@@ -149,7 +149,7 @@ header label span {
   overflow-x: hidden;
 }
 header h4 {
-  color: var(--secondary-color);
+  color: var(--secondary_itss-color);
 }
 .search-wrapper span {
   display: inline-block;
@@ -177,7 +177,7 @@ header h4 {
 }
 .user-wrapper small {
   display: inline-block;
-  color: var(--text-grey);
+  color: var(--text_itss-grey);
 }
 
 main {
@@ -201,12 +201,12 @@ main {
   background: #fff;
   padding: 2rem;
   border-radius: 2px;
-  color: var(--text-grey);
+  color: var(--text_itss-grey);
 }
 
 .card-single.active {
   color: #fff;
-  background: var(--main-color);
+  background: var(--main_itss-color);
 }
 
 .card-single.active div h1 {
@@ -223,15 +223,15 @@ main {
 
 /*.card-single div:last-child span{
     font-size: 3rem;
-    color:var(--main-color);
+    color:var(--main_itss-color);
 }
 
 .card-single div:first-child span{
-    color: var(--text-grey);
+    color: var(--text_itss-grey);
 }
 
 .card-single:last-child {
-    background  : var(--main-color);
+    background  : var(--main_itss-color);
 } */
 
 /* .card-single:last-child h1,
@@ -246,7 +246,7 @@ main {
   display: grid;
   grid-template-columns: 65% auto;
 }
-.card {
+.card_itss {
   background: #fff;
   border-radius: 5px;
   padding: 1rem;
@@ -264,12 +264,12 @@ main {
 }
 
 .card-header button {
-  background: var(--main-color);
+  background: var(--main_itss-color);
   border-radius: 10px;
   color: #fff;
   font-size: 0.8rem;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--main-color);
+  border: 1px solid var(--main_itss-color);
 }
 
 
@@ -301,14 +301,14 @@ main {
 
 .info small {
   font-weight: 600;
-  color: var(--text-grey);
+  color: var(--text_itss-grey);
 }
 
 .contact span {
   font-size: 1.3rem;
   display: inline-block;
   margin-left: 0.5rem;
-  color: var(--main-color);
+  color: var(--main_itss-color);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -370,7 +370,7 @@ main {
   }
   header h2 label {
     display: inline-block;
-    background: var(--main-color);
+    background: var(--main_itss-color);
     padding-right: 0rem;
     margin-right: 1rem;
     height: 40px;
@@ -435,3 +435,135 @@ main {
 }
 
 /* -------------------------------------------------------------------------------------------- */
+/* ----- new added ---*/
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.table {
+  border-spacing: 0 15px;
+  border-collapse: separate;
+}
+
+.user {
+  text-align: center;
+}
+
+.table thead tr th,
+.table thead tr td,
+.table tbody tr th,
+.table tbody tr td {
+  vertical-align: middle;
+  border: none;
+}
+
+.px-2 {
+  text-align: end;
+}
+
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #512da8;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  margin-left: 38%;
+  padding-bottom: 60% 30% 30% 30%;
+}
+
+.profileImage1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #512da8;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.omnath {
+  margin-left: 100%;
+  margin-top: 30%;
+}
+
+.rung {
+  background-color: rgb(39, 119, 92);
+  color: #fff;
+}
+
+.table thead tr th:nth-last-child(1),
+.table thead tr td:nth-last-child(1),
+.table tbody tr th:nth-last-child(1),
+.table tbody tr td:nth-last-child(1) {
+  text-align: center;
+}
+
+.table tbody tr {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+}
+
+.table tbody tr td {
+  background: #fff;
+}
+
+.table tbody tr td:nth-child(1) {
+  border-radius: 30px 0 0 30px;
+}
+
+.table tbody tr td:nth-last-child(1) {
+  border-radius: 0 30px 30px 0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info__img img {
+  height: 55px;
+  width: 55px;
+  border-radius: 45px;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  margin: 20px auto;
+}
+
+.card-header {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body p {
+  margin: 0;
+  font-size: 18px;
+}
+
+#stock-price {
+  color: green;
+}
+
+#stock-change {
+  color: red;
+}

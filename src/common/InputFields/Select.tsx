@@ -23,7 +23,7 @@ interface Iinput {
 export function Select(props: any) {
   const { wd, label, options, name, section,currdoc,modifydoc,cal} = props
   const errorMsg = getErrorValueN(currdoc, 'errorsAll.' + section)
-  let selectclassname = 'input-field'
+  let selectclassname = 'input_itss-field'
   if (errorMsg !== null) {
     if (errorMsg !== undefined && errorMsg.length > 0) {
       selectclassname = 'error-input-field'
@@ -31,7 +31,7 @@ export function Select(props: any) {
   }
   
   return (
-    <div className={`col-${wd}`}>
+    <div className={`col_itss-${wd}`}>
       <div className={selectclassname}>
         <select required name={name} 
           value={getValue(currdoc,section)} 
@@ -42,7 +42,7 @@ export function Select(props: any) {
             <option label={item.value} value={item.key} key={i} />
           ))}
         </select>
-        <label className="label-name">
+        <label className="label_itss-name">
           <span className="content-name">{label}</span>
         </label>
       </div>

@@ -1,5 +1,6 @@
 import React, { useMemo,useCallback } from 'react'
 import Table from '../../common/table/Table'
+import ResponsiveTable from '../../common/ResponsiveTable/ResponsiveTable'
 import Column from '../../common/table/Column'
 import { Redirect, withRouter } from 'react-router-dom'
 import fetchGQL from '../../common/queries/recommendationQuery'
@@ -9,7 +10,8 @@ import {useAltKey,useKey} from '../../common/shortcurkeys'
 import Loader from '../../common/Loader/Loader'
 import Messagesnackbar from '../../common/Alert'
 import AlertDialog from '../../common/PopupModals/ConfirmationModal'
-function RecommendationList() {
+
+function RecommendationList1() {
 
    const fetchquery = useMemo(()=>(fetchGQL),[1])
    const deletequery = useMemo(()=>(deleteGQL),[1])
@@ -32,7 +34,7 @@ function RecommendationList() {
     return <Redirect push to={redirectpath} /> 
   } else
    return (
-        <div className="card">
+        <div className="card_itss">
             <Loader display={loaderDisplay}/>
           <div className="card-body">
           <Table
@@ -75,6 +77,41 @@ function RecommendationList() {
 
         </div>
     )
+}
+function RecommendationList() {
+
+  const fetchquery = useMemo(()=>(fetchGQL),[1])
+  const deletequery = useMemo(()=>(deleteGQL),[1])
+  const [tableData,loaderDisplay,docno, setDocno,redirect, setRedirect,documentstatus,deleteDocument,closeSnackBar]:any=useTableAction(fetchquery,"recommendation",deletequery)
+  
+  let tabledata:any=[]
+  if(tableData) {
+   tabledata= useMemo(()=>tableData,[loaderDisplay])
+  }
+  const setDocStatus = (id: string, redirect: boolean) => {
+   setDocno(id)
+   setRedirect(redirect)
+ }
+
+ const M_setDocStatus = useCallback((id,redirect) => {setDocStatus(id,redirect)},[1])
+ const {action,yesaction,noaction,dailogtext,dailogtitle} = documentstatus;
+ useAltKey("n",() =>{setDocStatus("NO-ID",true)})
+ if (redirect) {
+   let redirectpath = '/recommendationedit?z_id=' + docno
+   return <Redirect push to={redirectpath} /> 
+ } else
+  return (
+       <div >
+           <Loader display={loaderDisplay}/>
+         <div >
+          <ResponsiveTable/>
+             
+       </div>
+       <AlertDialog open={action}  handleno={noaction} handleyes={yesaction} dailogtext={dailogtext} dailogtitle={dailogtitle}/>           
+       <Messagesnackbar snackbaropen={documentstatus.snackbaropen} snackbarseverity={documentstatus.snackbarseverity} handlesnackbarclose={closeSnackBar} snackbartext={documentstatus.snackbartext}/>                    
+
+       </div>
+   )
 }
 
 export default RecommendationList

@@ -4,7 +4,7 @@ function Customers() {
   console.log('in Customers')
   return (
     <div className="customers">
-      <div className="card">
+      <div className="card_itss">
         <div className="card-header">
           <h3>New Customers</h3>
           <button>

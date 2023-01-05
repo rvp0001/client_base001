@@ -56,7 +56,7 @@ useAltKey("n",() =>{setDocStatus("NO-ID",true)})
     return (
       <div className="projects">
         <Loader display={loaderDisplay}/>
-        <div className="card">
+        <div className="card_itss">
           <div className="card-body">
             
               <Table

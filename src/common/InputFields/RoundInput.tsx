@@ -37,7 +37,7 @@ export function LeftIconRoundInput(props:IRoundInput) {
     }
   }  
       return (
-        <div className={`col-${wd}`}>
+        <div className={`col_itss-${wd}`}>
           <div className="round-input-field"
           >
           <i className={iconClass}></i>

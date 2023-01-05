@@ -3,7 +3,7 @@ import './checkbox.css'
 export function Checkbox(props: any) {
   const { wd } = props
   return (
-    <div className={`col-${wd}`}>
+    <div className={`col_itss-${wd}`}>
       <div className="checkbox-container">
         <input type="checkbox" id="cb1" />
         <label htmlFor="cb1">Checkbox 1</label>

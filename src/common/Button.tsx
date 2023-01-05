@@ -5,7 +5,7 @@ export function Button(props: any) {
   wd = wd ? wd : '12'
   return (
     <>
-      <div className={`col-${wd}`}>
+      <div className={`col_itss-${wd}`}>
         <div className="item">
           <button className={className} name={name} onClick={()=>onClick('save')}>
             {label}

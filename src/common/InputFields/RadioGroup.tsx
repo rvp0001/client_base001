@@ -4,7 +4,7 @@ export function RadioGroup(props: any) {
   const { children, errormsg } = props
   return (
     <div className="radio-btn-group">
-      <div className="row">{children}</div>
+      <div className="row_itss">{children}</div>
       <div className="field-error">{errormsg}</div>
     </div>
   )
