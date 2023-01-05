@@ -99,7 +99,7 @@ function Table(props: any) {
                                        
                                         return <Column key={j+"#"+fieldname} data={data && data[fieldname]? data[fieldname]:""} columnClick={onRowClick} id={data.z_id}/>
                                     })}
-                                    {<Column data={<div className="table-button-container">{actions.map((action:any,k:any)=>{
+                                    {<Column data={<div className="table-button-container_itss">{actions.map((action:any,k:any)=>{
                                         return(<SMIconButton key={k+"#"+action.icon} action={action.action} id={data && data["z_id"]? data["z_id"]:""} icon={action.icon} className={action.className}/>)})}</div>}/>
                                     }
                                     </tr>)})

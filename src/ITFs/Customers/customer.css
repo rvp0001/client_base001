@@ -6,20 +6,20 @@
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
 } */
 
-.container {
+.container_itss {
   /* max-width: 700px; */
   width: 100%;
   background: #fff;
   padding: 25px 30px;
 }
 
-.container .title {
+.container_itss .title {
   font-size: 25px;
   font-weight: 500;
   position: relative;
 }
 
-/* .container .title::before {
+/* .container_itss .title::before {
   content: '';
   position: absolute;
   height: 3px;
@@ -29,7 +29,7 @@
   bottom: 0;
 } */
 
-.container .user-details {
+.container_itss .user-details {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

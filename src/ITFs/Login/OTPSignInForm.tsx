@@ -278,7 +278,7 @@ export function OTPSignInForm(props:any) {
       </>}
       <div  className="field-error">{state.formErrorMessage}</div>
       <M_SocialMediaLogin label="Login" />
-      <div className='switch-login-container'onClick={()=>setForm()} >New User ?</div>
+      <div className='switch-login-container_itss'onClick={()=>setForm()} >New User ?</div>
     </div>
   )
 }

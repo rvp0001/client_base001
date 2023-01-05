@@ -6,7 +6,7 @@ export  function Header(props: any) {
   return (
     <header>
       <h2>
-        <label htmlFor="nav-toggle">
+        <label htmlFor="nav_itss-toggle">
           <span className="las la-bars"></span>
         </label>
         {title}

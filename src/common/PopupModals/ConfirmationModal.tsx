@@ -9,7 +9,7 @@ function Modal({open,handleno,handleyes,dailogtext,dailogtitle}: any) {
         <>
         {/* <input type="checkbox" id="click" />
                 <label htmlFor="click" className="click-me">Click Me</label> */}
-        <div className="modal-container">
+        <div className="modal-container_itss">
             <div className="center">
                 
                 <div className="content">

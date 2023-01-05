@@ -10,17 +10,17 @@
 input[type="button"]:disabled, input[type="button"]:hover:disabled{
   background: #dddddd;
 }
-.login-container-mobile{
+.login-container_itss-mobile{
   display: none;
 }
-.login-container {
+.login-container_itss {
   position: relative;
   width: 100%;
   min-height: 100vh;
   background-color: #fff;
   overflow: hidden;
 }
-.login-container:before {
+.login-container_itss:before {
   content: '';
   position: absolute;
   width: 2000px;
@@ -38,7 +38,7 @@ input[type="button"]:disabled, input[type="button"]:hover:disabled{
   transition: 2s ease-in-out;
 }
 
-/* .form-container{
+/* .form-container_itss{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -182,7 +182,7 @@ input[type="button"]:disabled, input[type="button"]:hover:disabled{
   border: 2px solid var(--button_itss-primary);
 }
 
-.panels-container {
+.panels-container_itss {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -244,49 +244,49 @@ input[type="button"]:disabled, input[type="button"]:hover:disabled{
 
 /*Animation*/
 
-.login-container.sign-up-mode:before {
+.login-container_itss.sign-up-mode:before {
   transform: translate(100%, -50%);
   right: 52%;
 }
 
-.login-container.sign-up-mode .panel-left .image,
-.login-container.sign-up-mode .panel-left .content {
+.login-container_itss.sign-up-mode .panel-left .image,
+.login-container_itss.sign-up-mode .panel-left .content {
   transform: translateX(-800px);
 }
 
-.login-container.sign-up-mode .panel-right .content,
-.login-container.sign-up-mode .panel-right .image {
+.login-container_itss.sign-up-mode .panel-right .content,
+.login-container_itss.sign-up-mode .panel-right .image {
   transform: translateX(0px);
 }
 
-.login-container.sign-up-mode .panel-left {
+.login-container_itss.sign-up-mode .panel-left {
   pointer-events: none;
 }
 
-.login-container.sign-up-mode .panel-right {
+.login-container_itss.sign-up-mode .panel-right {
   pointer-events: all;
 }
 
-.login-container.sign-up-mode .signin-signup {
+.login-container_itss.sign-up-mode .signin-signup {
   left: 25%;
 }
 
-.login-container.sign-up-mode .form.sign-in-form {
+.login-container_itss.sign-up-mode .form.sign-in-form {
   z-index: 1;
   opacity: 0;
 }
 
-.login-container.sign-up-mode .form.sign-up-form {
+.login-container_itss.sign-up-mode .form.sign-up-form {
   z-index: 2;
   opacity: 1;
 }
 
 @media (max-width: 870px) {
-  login-container {
+  login-container_itss {
     min-height: 800px;
     height: 100vh;
   }
-  .login-container:before {
+  .login-container_itss:before {
     width: 1500px;
     height: 1500px;
     left: 30%;
@@ -304,7 +304,7 @@ input[type="button"]:disabled, input[type="button"]:hover:disabled{
     transition: 1s 0.8s ease-in-out;
   }
 
-  .panels-container {
+  .panels-container_itss {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
   }
@@ -350,18 +350,18 @@ input[type="button"]:disabled, input[type="button"]:hover:disabled{
     transform: translateY(300px);
   }
 
-  .login-container.sign-up-mode:before {
+  .login-container_itss.sign-up-mode:before {
     transform: translate(-50%, 100%);
     bottom: 32%;
     right: initial;
   }
 
-  .login-container.sign-up-mode .left-panel .image,
-  .login-container.sign-up-mode .left-panel .content {
+  .login-container_itss.sign-up-mode .left-panel .image,
+  .login-container_itss.sign-up-mode .left-panel .content {
     transform: translateY(-300px);
   }
 
-  .login-container.sign-up-mode .signin-signup {
+  .login-container_itss.sign-up-mode .signin-signup {
     top: 5%;
     transform: translate(-50%, 0);
     left: 50%;
@@ -387,16 +387,16 @@ input[type="button"]:disabled, input[type="button"]:hover:disabled{
     padding: 0.5rem 1rem;
   }
 
-  .login-container:before {
+  .login-container_itss:before {
     bottom: 72%;
     left: 50%;
   }
 
-  .login-container.sign-up-mode:before {
+  .login-container_itss.sign-up-mode:before {
     bottom: 28%;
     left: 50%;
   }
-  .login-container.sign-up-mode .signin-signup {
+  .login-container_itss.sign-up-mode .signin-signup {
     top: 5%;
     transform: translate(-50%, 0);
     left: 50%;
@@ -411,11 +411,11 @@ input[type="button"]:disabled, input[type="button"]:hover:disabled{
   } */
 
 
-.login-container{
+.login-container_itss{
   display: none;
 }
 
-.login-container-mobile{
+.login-container_itss-mobile{
   display: block;
   min-height: 100vh;
     padding: 0;
@@ -425,7 +425,7 @@ input[type="button"]:disabled, input[type="button"]:hover:disabled{
     justify-content: center;
     
 }
-.switch-login-container{
+.switch-login-container_itss{
   display: block;
   padding: 10px;
   font-size: 18px;

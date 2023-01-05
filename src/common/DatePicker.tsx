@@ -192,7 +192,7 @@ function DatePicker(props: any) {
         <div className="days" onClick={() => {}} key={shortid.generate()}>
           {populateDays()}
         </div>
-        <div className="date-button-container">
+        <div className="date-button-container_itss">
           <div className="date-cancel-button" onClick={toggleDatePicker}>
             Cancel
           </div>

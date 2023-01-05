@@ -163,7 +163,7 @@ export const RecommendationComponent = (props: any) => {
     return (
       <>
         <Loader display={loaderDisplay} />
-        <div className="container">
+        <div className="container_itss">
           <div className="grid_itss">
      
             <div className="row_itss">

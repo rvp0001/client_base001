@@ -30,11 +30,11 @@ export function Input(props: Iinput) {
   }
   return (
     <div className={`col_itss-${wd}`}>
-       <div className="container">
+       <div className="container_itss">
       <h2>Video Category</h2>
 
       <div className="select-box">
-        <div className="options-container">
+        <div className="options-container_itss">
           <div className="option">
             <input
               type="radio"

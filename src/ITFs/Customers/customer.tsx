@@ -3,7 +3,7 @@ import React from 'react'
 export default function customer() {
   return (
     <div className="form-body">
-      {/* <div className="container">
+      {/* <div className="container_itss">
         <div className="title">Registration</div>
 
         <div className="user-details">

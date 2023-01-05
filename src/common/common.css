@@ -1,4 +1,4 @@
-.container {
+.container_itss {
   /* max-width: 700px; */
   width: 100%;
   background: #fff;
@@ -6,13 +6,13 @@
   min-height: calc(100vh - 150px);
 }
 
-.container .title {
+.container_itss .title {
   font-size: 25px;
   font-weight: 500;
   position: relative;
 }
 
-/* .container .title::before {
+/* .container_itss .title::before {
   content: '';
   position: absolute;
   height: 3px;

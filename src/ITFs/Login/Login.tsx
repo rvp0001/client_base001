@@ -58,15 +58,15 @@ if(authenticated){
   return (<Dashboard/>)
 }else
   return (<>
-    <div className={form === 'signin' ? 'login-container' : 'login-container sign-up-mode'}>
-      <div className="form-container">
+    <div className={form === 'signin' ? 'login-container_itss' : 'login-container_itss sign-up-mode'}>
+      <div className="form-container_itss">
         <div className="signin-signup">
         {logintype ==="otp" ? <M_OTPSignInForm />:<M_SignInForm />}
           {logintype ==="otp" ? <M_OTPSignUpForm />:<M_SignUpForm/>}
           
         </div>
       </div>
-      <div className="panels-container">
+      <div className="panels-container_itss">
         <div className="panel panel-left">
           <div className="content">
             <h3>New Here?</h3>
@@ -105,7 +105,7 @@ if(authenticated){
       </div>
     </div>
     
-    <div className='login-container-mobile'>
+    <div className='login-container_itss-mobile'>
     {form ==='signin'?logintype ==="otp"? <M_OTPSignInForm setForm={setSignupForm}/>:<M_SignInForm setForm={setSignupForm}/>
       :logintype ==="otp" ? <M_OTPSignUpForm setForm={setSigninForm}/>:<M_SignUpForm setForm={setSignupForm}/>
       

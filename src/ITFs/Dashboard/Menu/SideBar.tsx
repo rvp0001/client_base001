@@ -119,7 +119,7 @@ export function SideBar1(props: any) {
 
     
   return (<>
-  <input type="checkbox" id="nav-toggle" checked={displayMenu} onClick={()=>setDisplayMenu(!displayMenu)}/>
+  <input type="checkbox" id="nav_itss-toggle" checked={displayMenu} onClick={()=>setDisplayMenu(!displayMenu)}/>
     <div className="sidebar">
       <div className="sidebar-brand">
         <h2>

@@ -26,7 +26,7 @@ function Stepper(props: any) {
     }
    }
     return (
-        <div className="stepper-container">
+        <div className="stepper-container_itss">
             {props.children.map((ele:any,i:number)=>(<div className="step-form" id={"form"+(i+1)}>
             <h3>{ele.props.title}</h3>
                 {ele.props.children}

@@ -1,4 +1,4 @@
-.loader-container{
+.loader-container_itss{
     position: fixed;
     top: 0;
     width: 100%;
@@ -8,7 +8,7 @@
     z-index: 100;
 }
 
-.loader-container .center{
+.loader-container_itss .center{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -16,7 +16,7 @@
     height: 100vh;
 }
 
-.loader-container .ring{
+.loader-container_itss .ring{
     position: absolute;
     width: 200px;
     height: 200px;
@@ -40,7 +40,7 @@
         
     }
 }
-.loader-container .ring:before{
+.loader-container_itss .ring:before{
     position: absolute;
     content: '';
     left: 0;
@@ -51,7 +51,7 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, .3);
 }
 
-.loader-container span{
+.loader-container_itss span{
     color: #737373;
     font-size: 1.3rem;
     letter-spacing: 2px;

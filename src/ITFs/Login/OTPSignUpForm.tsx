@@ -299,7 +299,7 @@ const ResendOTP=(currentdocument:any)=>{
       }
       <div  className="field-error">{state.formErrorMessage}</div>
        <M_SocialMediaLogin label="Sign up" />
-       <div className='switch-login-container' onClick={()=>setForm()}>Already a member?</div> 
+       <div className='switch-login-container_itss' onClick={()=>setForm()}>Already a member?</div> 
     </div>
   )
 }

@@ -99,7 +99,7 @@
   color: white;
 }
 
-.date-picker .date-button-container {
+.date-picker .date-button-container_itss {
   /* padding: 15px 0px; */
   border-top: 1px solid var(--text_itss-grey);
   display: flex;

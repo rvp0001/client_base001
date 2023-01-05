@@ -9,7 +9,7 @@ import Radio from '../common/InputFields/RadioButton/Radio'
 import DatePicker from '../common/DatePicker/DatePicker'
 export default function Inventery(props: any) {
   return (
-    <div className="container">
+    <div className="container_itss">
       <div className="grid_itss">
         <div className="row_itss">
           <Input wd="4" label="User Name" name="username" value="" />

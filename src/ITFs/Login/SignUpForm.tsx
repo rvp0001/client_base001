@@ -144,7 +144,7 @@ const onCaptchaChange = (value:any) => {
       <input type="button" value="Register" className="btn solid" onClick={()=>{handleSubmit(user)} }  disabled = {captcha ? "" : "disabled"}/>
       <div  className="field-error">{state.formErrorMessage}</div>
        <M_SocialMediaLogin label="Sign up" />
-       <div className='switch-login-container' onClick={()=>setForm()}>Already a member?</div> 
+       <div className='switch-login-container_itss' onClick={()=>setForm()}>Already a member?</div> 
     </div>
   )
 }

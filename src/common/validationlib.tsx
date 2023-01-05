@@ -635,7 +635,7 @@ export const phoneNumberCheck = (value:any) =>
 
 
     // const styles =StyleSheet.create({
-    //   container:{
+    //   container_itss:{
     //       justifyContent:'center',
     //       margin:20
     //   },

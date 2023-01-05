@@ -178,7 +178,7 @@ const pushNotificationButton = () =>
 {
   if('Notification' in window  && 'serviceWorker' in navigator ) {
 
-    return( <div className='switch-login-container'onClick={()=>askForPushNotificationPermission()} >Enable Push Notification -New</div>)
+    return( <div className='switch-login-container_itss'onClick={()=>askForPushNotificationPermission()} >Enable Push Notification -New</div>)
     
   }
   else
@@ -193,7 +193,7 @@ const notificationButton = () =>
 {
   if('Notification' in window ) {
 
-    return( <div className='switch-login-container'onClick={()=>askForNotificationPermission()} >Display Notification </div>)
+    return( <div className='switch-login-container_itss'onClick={()=>askForNotificationPermission()} >Display Notification </div>)
     
   }
   else
@@ -351,8 +351,8 @@ export function SignInForm(props:any) {
       <input type="button" value="Login" className="btn solid" onClick={()=>{handleSubmit(user)}}  disabled = {captcha ? "" : "disabled"} />
       <div  className="field-error">{state.formErrorMessage}</div>
       <M_SocialMediaLogin label="Login" />
-      <div className='switch-login-container'onClick={()=>setForm()} >New User ?</div>
-      <div className='switch-login-container'onClick={()=>promptTest()} > App ICON ON FRONT SCREEN </div>
+      <div className='switch-login-container_itss'onClick={()=>setForm()} >New User ?</div>
+      <div className='switch-login-container_itss'onClick={()=>promptTest()} > App ICON ON FRONT SCREEN </div>
       {notificationButton()}
       {pushNotificationButton()}
 
