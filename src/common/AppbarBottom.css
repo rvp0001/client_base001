@@ -45,19 +45,19 @@
   font-size: 18px;
 }
 
-/* #nav_itss-toggle:checked ~ .main-content nav{
+/* #nav_itss-toggle:checked ~ .main-content_itss nav{
     width: calc(700px - 70px);
     margin-left:15%;
     margin-right:15%;
 }
 
-#nav_itss-toggle:checked + .main-content .nav_itss{
+#nav_itss-toggle:checked + .main-content_itss .nav_itss{
     margin-left:22%;
     margin-right:22%;
 }
 
 @media only screen and (max-width: 560px){
-    .nav_itss-toggle:checked ~ .main-content nav{
+    .nav_itss-toggle:checked ~ .main-content_itss nav{
         margin-left:0px;
     margin-right:0px;   
     }

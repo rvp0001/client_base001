@@ -77,19 +77,19 @@ export default function Inventery(props: any) {
             wd="2"
             label="Clear"
             name="register"
-            className="btn-deault btn-small"
+            className="btn_itss-deault btn_itss-small"
           />
           <Button
             wd="2"
             label="Register"
             name="register"
-            className="btn1 btn-small"
+            className="btn1 btn_itss-small"
           />
           <Button
             wd="2"
             label="Register"
             name="register"
-            className="btn1 btn-small"
+            className="btn1 btn_itss-small"
           />
         </div>
         <div className="row_itss">

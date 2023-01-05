@@ -40,12 +40,12 @@
   border-bottom: 1px solid var(--error_itss-color);
 }
 
-.field-error {
+.field-error_itss {
   color: var(--error_itss-color);
   font-size: 12px;
 }
 
-.round-field-error {
+.round-field-error_itss {
   color: var(--error_itss-color);
   font-size: 12px;
   padding-left: 1rem;

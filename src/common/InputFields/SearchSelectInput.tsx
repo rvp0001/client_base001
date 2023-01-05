@@ -92,7 +92,7 @@ export function Input(props: Iinput) {
         </div>
       </div>
     </div>
-      <div className="field-error">{errorMsg}</div>
+      <div className="field-error_itss">{errorMsg}</div>
     </div>
   )
 }

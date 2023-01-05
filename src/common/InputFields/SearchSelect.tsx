@@ -46,7 +46,7 @@ export function SearchSelect(props: any) {
           /></span>
           <span className="las la-sync" onClick={()=>{refresh()}} style={{flex:1,height:"100%",fontSize:"1.8rem",padding:"5px"}}/>
           </div>
-          <div className="field-error">{errorMsg}</div>
+          <div className="field-error_itss">{errorMsg}</div>
           </div>
   
     </>

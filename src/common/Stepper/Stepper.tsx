@@ -30,7 +30,7 @@ function Stepper(props: any) {
             {props.children.map((ele:any,i:number)=>(<div className="step-form" id={"form"+(i+1)}>
             <h3>{ele.props.title}</h3>
                 {ele.props.children}
-                <div className="btn-box">
+                <div className="btn_itss-box">
                 {i>0?<button type="button" id={"back"+(i+1)} onClick={()=>onBackButtonClick(i)}>Back</button>:<></>}
                 {i !== props.children.length-1 ?<button type="button" id={"next"+(i+1)} onClick={()=>{onNextButtonClick(i)}}>Next</button>:<></>}
                 { i === props.children.length-1 ?<button type="button" id={"back"+(i+1)}>Submit</button>:<></>} 

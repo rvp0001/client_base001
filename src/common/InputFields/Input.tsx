@@ -46,7 +46,7 @@ export function Input(props: Iinput) {
           <span className="content-name">{label}</span>
         </label>
       </div>
-      <div className="field-error">{errorMsg}</div>
+      <div className="field-error_itss">{errorMsg}</div>
     </div>
   )
 }

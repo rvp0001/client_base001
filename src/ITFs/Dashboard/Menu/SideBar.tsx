@@ -120,14 +120,14 @@ export function SideBar1(props: any) {
     
   return (<>
   <input type="checkbox" id="nav_itss-toggle" checked={displayMenu} onClick={()=>setDisplayMenu(!displayMenu)}/>
-    <div className="sidebar">
-      <div className="sidebar-brand">
+    <div className="sidebar_itss">
+      <div className="sidebar_itss-brand">
         <h2>
           <span className="lab la-accusoft"></span>
           <span>ITFs</span>
         </h2>
       </div>
-      <div className="sidebar-menu">
+      <div className="sidebar_itss-menu">
         {/* <ui> */}
         {menuList.map((menuitem, i) => {
           return (

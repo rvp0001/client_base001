@@ -51,7 +51,7 @@ export function LeftIconRoundInput(props:IRoundInput) {
         autoComplete="false"
           />
         </div>
-        <div className="round-field-error">{errorMsg}</div>
+        <div className="round-field-error_itss">{errorMsg}</div>
         </div>
       )
   }

@@ -46,7 +46,7 @@ export function Select(props: any) {
           <span className="content-name">{label}</span>
         </label>
       </div>
-      <div className="field-error">{errorMsg}</div>
+      <div className="field-error_itss">{errorMsg}</div>
     </div>
   )
 }

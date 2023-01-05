@@ -276,7 +276,7 @@ export function OTPSignInForm(props:any) {
       <input type="button" value="Submit" className="btn solid" onClick={()=>{handleOTPSubmit(user)}}   />
 
       </>}
-      <div  className="field-error">{state.formErrorMessage}</div>
+      <div  className="field-error_itss">{state.formErrorMessage}</div>
       <M_SocialMediaLogin label="Login" />
       <div className='switch-login-container_itss'onClick={()=>setForm()} >New User ?</div>
     </div>

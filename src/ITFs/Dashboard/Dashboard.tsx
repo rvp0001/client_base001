@@ -37,7 +37,7 @@ function Dashboard(props: any) {
   return (
     <Rounter>
       <SideBar selectcomponent={setDisplayComponent} />
-      <div className="main-content">
+      <div className="main-content_itss">
         <Header title={displayComponent} />
         <main>
           <Switch>

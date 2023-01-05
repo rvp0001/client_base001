@@ -11,11 +11,11 @@ export  function Header(props: any) {
         </label>
         {title}
       </h2>
-      <div className="search-wrapper">
+      <div className="search_itss-wrapper">
         <span className="las la-search"></span>
         <input type="search" placeholder="Search here" />
       </div>
-      <div className="user-wrapper">
+      <div className="user_itss-wrapper">
         <img src={usering} alt="" width="40px" height="40px" />
         <div>
           <h4>{authuser?.firstname ? authuser.firstname +" "+ authuser.lastname:authuser.username}</h4>

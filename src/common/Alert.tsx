@@ -10,7 +10,7 @@ function Alert({snackbaropen,snackbarseverity,handlesnackbarclose,snackbartext}:
        return () => clearTimeout(timer);}
     }, [snackbaropen])
     return (
-        <div className={displayAlert?`alert ${snackbarseverity} show`:`alert ${snackbarseverity} hide`}>
+        <div className={displayAlert?`alert_itss ${snackbarseverity} show`:`alert_itss ${snackbarseverity} hide`}>
             <span className={snackbarseverity === 'success'? "fas fa-check-circle":"fas fa-exclamation-circle"}></span>
             <span className="msg">{snackbartext}</span>
             <span className="close-btn" onClick={()=>{handlesnackbarclose();setDisplayAlert(displayAlert)}}>
